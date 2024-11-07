@@ -1,0 +1,1 @@
+export { default as LanguagesI8N } from './languages'

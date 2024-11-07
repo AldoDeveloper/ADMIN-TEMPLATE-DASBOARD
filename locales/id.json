@@ -1,0 +1,36 @@
+{
+  "auth": {
+    "login": {
+      "title": "Masuk",
+      "email_placeholder": "Masukkan email Anda",
+      "password_placeholder": "Masukkan kata sandi Anda",
+      "submit_button": "Masuk",
+      "forgot_password": "Lupa kata sandi Anda?"
+    },
+    "signup": {
+      "title": "Daftar",
+      "email_placeholder": "Masukkan email Anda",
+      "password_placeholder": "Buat kata sandi",
+      "confirm_password_placeholder": "Konfirmasi kata sandi",
+      "submit_button": "Daftar",
+      "login_link": "Sudah punya akun? Masuk"
+    }
+  },
+  "profile": {
+    "greeting": "Halo, {{name}}!",
+    "edit_profile": "Edit Profil",
+    "logout_button": "Keluar"
+  },
+  "errors": {
+    "email_required": "Email wajib diisi",
+    "password_required": "Kata sandi wajib diisi",
+    "invalid_email_format": "Format email tidak valid",
+    "min_password_length": "Kata sandi harus minimal 6 karakter",
+    "required" : "Field ini wajib diisi",
+    "alternatives": {
+      "match": "atribut tidak cocok dengan jenis apa pun yang diizinkan"
+    }
+  },
+  "navbar": {},
+  "main_content": {}
+}

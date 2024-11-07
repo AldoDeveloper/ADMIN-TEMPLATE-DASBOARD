@@ -1,0 +1,36 @@
+{
+  "auth": {
+    "login": {
+      "title": "Login",
+      "email_placeholder": "Enter your email",
+      "password_placeholder": "Enter your password",
+      "submit_button": "Login",
+      "forgot_password": "Forgot your password?"
+    },
+    "signup": {
+      "title": "Sign Up",
+      "email_placeholder": "Enter your email",
+      "password_placeholder": "Create a password",
+      "confirm_password_placeholder": "Confirm your password",
+      "submit_button": "Sign Up",
+      "login_link": "Already have an account? Login"
+    }
+  },
+  "profile": {
+    "greeting": "Hello, {{name}}!",
+    "edit_profile": "Edit Profile",
+    "logout_button": "Logout"
+  },
+  "errors": {
+    "email_required": "Email is required",
+    "password_required": "Password is required",
+    "invalid_email_format": "Invalid email format",
+    "min_password_length": "Password must be at least 6 characters long",
+    "required": "This field is required",
+    "alternatives": {
+      "match": "attribute does not match any of the allowed types"
+    }
+  },
+  "navbar": {},
+  "main_content": {}
+}

@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("./assets/font/static/NunitoSans_10pt-Light.ttf");
+}
+
+* {
+  scroll-behavior: smooth;
+  font-family: "Nunito Sans";
+}
+
+.disabled-scrool::-webkit-scrollbar {
+  display: none;
+}
+
+.disabled-scrool::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+
+.loader {
+  width: 4px;
+  color: var(--color, #000);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow:
+    19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 0px,
+    19px 0 0 5px, 38px 0 0 5px, 57px 0 0 5px,
+    19px 19px 0 0px, 38px 19px 0 0px, 57px 19px 0 0px;
+  transform: translateX(-38px);
+  animation: l26 2s infinite linear;
+}
+
+@keyframes l26 {
+  12.5% {
+    box-shadow:
+      19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 5px,
+      19px 0 0 5px, 38px 0 0 0px, 57px 0 0 5px,
+      19px 19px 0 0px, 38px 19px 0 0px, 57px 19px 0 0px
+  }
+
+  25% {
+    box-shadow:
+      19px -19px 0 5px, 38px -19px 0 0px, 57px -19px 0 5px,
+      19px 0 0 0px, 38px 0 0 0px, 57px 0 0 0px,
+      19px 19px 0 0px, 38px 19px 0 5px, 57px 19px 0 0px
+  }
+
+  50% {
+    box-shadow:
+      19px -19px 0 5px, 38px -19px 0 5px, 57px -19px 0 0px,
+      19px 0 0 0px, 38px 0 0 0px, 57px 0 0 0px,
+      19px 19px 0 0px, 38px 19px 0 0px, 57px 19px 0 5px
+  }
+
+  62.5% {
+    box-shadow:
+      19px -19px 0 0px, 38px -19px 0 0px, 57px -19px 0 0px,
+      19px 0 0 5px, 38px 0 0 0px, 57px 0 0 0px,
+      19px 19px 0 0px, 38px 19px 0 5px, 57px 19px 0 5px
+  }
+
+  75% {
+    box-shadow:
+      19px -19px 0 0px, 38px -19px 0 5px, 57px -19px 0 0px,
+      19px 0 0 0px, 38px 0 0 0px, 57px 0 0 5px,
+      19px 19px 0 0px, 38px 19px 0 0px, 57px 19px 0 5px
+  }
+
+  87.5% {
+    box-shadow:
+      19px -19px 0 0px, 38px -19px 0 5px, 57px -19px 0 0px,
+      19px 0 0 0px, 38px 0 0 5px, 57px 0 0 0px,
+      19px 19px 0 5px, 38px 19px 0 0px, 57px 19px 0 0px
+  }
+}
+
+.bar-scrool::-webkit-scrollbar {
+  background: transparent;
+  width: var(--width, 11px);
+}
+
+.bar-scrool::-webkit-scrollbar-thumb {
+  background: var(--webkit-set-color, #7f30f7);
+  border-radius: 10px;
+  border: 2.5px solid white;
+  /* Replace with Tailwind's gray-800 */
+}
+
+html::-webkit-scrollbar{
+  background: white;
+  width: var(--width, 11px);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: lightgrey;
+  border-radius: 10px;
+  border: 2.5px solid white;
+  /* Replace with Tailwind's gray-800 */
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #711ee3;
+}
+
+.CircularProgressbar-path {
+  stroke: red;
+}
+
+.CircularProgressbar-trail {
+  stroke: gray;
+}
+
+.CircularProgressbar-text {
+  fill: yellow;
+}
+
+.CircularProgressbar-background {
+  fill: green;
+}
+
+.text-svg {
+  font-size: 8em;
+  font-weight: bold;
+  text-anchor: middle;
+  fill: none;
+  stroke: red;
+  stroke-width: 4;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: dash 2s ease-in-out forwards infinite, colorchange 4s infinite;
+}
+.message-svg {
+  font-size: 1.2em;
+  opacity: 0;
+  animation: fadeIn 2s 2s forwards;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes colorchange {
+  0%, 100% {
+    fill: #fff;
+  }
+  50% {
+    fill: #ff6347;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

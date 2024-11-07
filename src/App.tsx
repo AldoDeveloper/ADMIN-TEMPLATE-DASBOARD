@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React from 'react'
 import { Routes } from './routes'
 import { useAtom } from 'jotai';
 import { StateContextApp } from './state/context';
@@ -11,17 +11,10 @@ type ActionRedicer = | { type: "inc", payload: number } | { type: "dsc", payload
 
 const initialCount: StateReducer = { count: 0 };
 
-function handleReducer(state: StateReducer, action: ActionRedicer) : StateReducer{
-  return{
-    count: state.count + 1
-  }
-};
-
 function App() {
 
   const themeApp = useThemaSystem();
   const [getApp, setApp] = useAtom(StateContextApp);
-  const [data, dispatch] = useReducer(handleReducer, initialCount);
 
   React.useEffect(() => {
 

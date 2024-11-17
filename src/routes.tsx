@@ -13,6 +13,7 @@ import Analityc from "./pages/Analityc";
 import Account from "./pages/Account";
 import Product from "./pages/Product";
 import Component from "./pages/Component";
+import DesignThinkingCanvas from "./components/Canvas";
 
 const HandleAsynElement: React.FC<{}> = () => {
     return (
@@ -39,9 +40,7 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: (
-                    <>
-                        <h1>Hello World</h1>
-                    </>
+                    <DesignThinkingCanvas/>
                 )
             },
             {

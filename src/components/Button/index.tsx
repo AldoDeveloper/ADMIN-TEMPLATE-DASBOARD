@@ -45,7 +45,7 @@ export default function Button(
     return (
         <React.Fragment>
             <button
-                disabled={icon && disabled ? true : false}
+                disabled={disabled === undefined || disabled === false ? false :  true}
                 type={type}
                 className={`${classNameSettingButton} relative py-1 focus:outline-none focus:ring transition duration-300 ease-in-out ${className}`}
                 {...rest}>

@@ -21,6 +21,37 @@
   display: none;
 }
 
+@keyframes fadeInBottomRightToast {
+  0% {
+      opacity: 0;
+      transform: translate(50%, 50%);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeOutBottomRightToast {
+  0% {
+      opacity: 1;
+      transform: translate(0, 0);
+  }
+
+  100% {
+      opacity: 0;
+      transform: translate(50%, 50%);
+  }
+}
+
+.fade-out-bottom-right-toast {
+  animation: fadeOutBottomRightToast 0.5s forwards;
+}
+
+.fade-in-bottom-right-toast {
+  animation: fadeInBottomRightToast 0.5s forwards;
+}
 
 .loader {
   width: 4px;
@@ -103,9 +134,9 @@ html::-webkit-scrollbar-thumb {
   /* Replace with Tailwind's gray-800 */
 }
 
-html::-webkit-scrollbar-thumb:hover {
+/* html::-webkit-scrollbar-thumb:hover {
   background: #711ee3;
-}
+} */
 
 .CircularProgressbar-path {
   stroke: red;

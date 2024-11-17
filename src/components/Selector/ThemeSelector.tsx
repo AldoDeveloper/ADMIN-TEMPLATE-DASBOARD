@@ -1,5 +1,6 @@
 import { ContextDasboard } from '@/state/context/dasboard';
-import React, { useState } from 'react';
+import React from 'react';
+import { toast } from 'react-toastify';
 
 const themes = [
     { id: 1, name: "md-purple",  colors: ['bg-md-purple-200', 'bg-md-purple-500'] },
@@ -13,6 +14,14 @@ const ThemeSelector: React.FC = () => {
     const { propsDasboard, setDasboard } = React.useContext(ContextDasboard);
     const themeApp = propsDasboard.theme;
 
+    const handleChangeTheme = async (themeName: string) => {
+        toast.success(`Change Theme ${themeApp?.toUpperCase()}`, {
+            position: "top-left",
+            autoClose: 2000
+        });
+        setDasboard("theme", { theme: themeName as any })
+    };
+
     return (
         <div className="p-6">
             <p className="text-slate-700 dark:text-slate-200 text-xl mb-7">Choose a theme:</p>
@@ -22,7 +31,7 @@ const ThemeSelector: React.FC = () => {
                         key={theme.id}
                         className={`relative flex items-center justify-center p-2 rounded-md cursor-pointer transition-colors duration-200 
                         ${themeApp === theme.name ? 'ring-2 ring-blue-400' : ''}`}
-                        onClick={() => setDasboard("theme", { theme: theme.name as any })}>
+                        onClick={() => handleChangeTheme(theme.name)}>
                         <span className={`absolute -top-2 -left-1 w-6 h-6 rounded-full ${theme.colors[0]}`}></span>
                         <span className={`w-6 h-6 rounded-full ${theme.colors[1]}`}></span>
                     </div>

@@ -1,3 +1,4 @@
+import 'react-toastify/dist/ReactToastify.css';
 import React from 'react'
 import { Routes } from './routes'
 import { useAtom } from 'jotai';
@@ -5,13 +6,9 @@ import { StateContextApp } from './state/context';
 import { ContextApp } from './state/context/app';
 import useThemaSystem from './hooks/useThema';
 import { PropsContextApp } from './state/context/interface';
+import { ToastContainerData } from '@component/container';
 
-type StateReducer  = { count : number }
-type ActionRedicer = | { type: "inc", payload: number } | { type: "dsc", payload: number } | { type: "reset" }
-
-const initialCount: StateReducer = { count: 0 };
-
-function App() {
+export default function App() {
 
   const themeApp = useThemaSystem();
   const [getApp, setApp] = useAtom(StateContextApp);
@@ -34,9 +31,8 @@ function App() {
   return (
     <ContextApp.Provider value={{ getApp, setApp }}>
       <Routes />
+      <ToastContainerData/>
     </ContextApp.Provider>
   )
 };
-
-export default App;
 

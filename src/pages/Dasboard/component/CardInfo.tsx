@@ -84,7 +84,7 @@ function CardInfo() : React.ReactNode {
                     darkMode={false}
                     header={<><h1 className={`text-start px-4 pt-2 text-xl ${textClassName("200")} font-semibold`}>INCOME</h1></>}
                     bodyClassName="px-4 py-3"
-                    className="bg-white dark:bg-slate-700 h-36">
+                    className="bg-white dark:bg-slate-800 h-36">
                     <div className="flex gap-3 items-center">
                         <AnimatedNumber
                             includeComma={false}
@@ -114,7 +114,7 @@ function CardInfo() : React.ReactNode {
                     darkMode={false}
                     header={<><h1 className="text-start px-4 pt-2 text-xl font-semibold">ORDER</h1></>}
                     bodyClassName="px-4 py-3"
-                    className="bg-white dark:bg-slate-700 h-36">
+                    className="bg-white dark:bg-slate-800 h-36">
                     <div className="flex gap-3 items-center">
                         <AnimatedNumber
                             includeComma={false}
@@ -143,7 +143,7 @@ function CardInfo() : React.ReactNode {
                     darkMode={false}
                     bodyClassName="px-4 py-3"
                     header={<><h1 className="text-start px-4 pt-2 text-xl font-semibold">PERSON</h1></>}
-                    className="bg-white dark:bg-slate-700 h-36">
+                    className="bg-white dark:bg-slate-800 h-36">
                     <div className="flex gap-3 items-center">
                         <AnimatedNumber
                             includeComma={false}
@@ -172,7 +172,7 @@ function CardInfo() : React.ReactNode {
                     darkMode={false}
                     bodyClassName="px-4 py-3"
                     header={<><h1 className="text-start px-4 pt-2 text-xl font-semibold">DIAGNOSTIK</h1></>}
-                    className="bg-white dark:bg-slate-700 h-36">
+                    className="bg-white dark:bg-slate-800 h-36">
                     <div className="flex gap-3 items-center">
                         <AnimatedNumber
                             includeComma={false}

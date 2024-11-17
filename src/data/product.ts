@@ -498,6 +498,506 @@ export default [
         "description": "Compact treadmill with adjustable speed settings.",
         "brand": "FitMove",
         "rating": 4.5
+      },
+      {
+        "id": 51,
+        "name": "Yoga Mat",
+        "category": "Fitness",
+        "price": 19.99,
+        "stock": 35,
+        "description": "Non-slip yoga mat for safe and comfortable workout.",
+        "brand": "ZenFit",
+        "rating": 4.7
+      },
+      {
+        "id": 52,
+        "name": "Adjustable Dumbbells",
+        "category": "Fitness",
+        "price": 89.99,
+        "stock": 20,
+        "description": "Set of adjustable dumbbells with various weight settings.",
+        "brand": "PowerLift",
+        "rating": 4.6
+      },
+      {
+        "id": 53,
+        "name": "Resistance Bands Set",
+        "category": "Fitness",
+        "price": 14.99,
+        "stock": 40,
+        "description": "Set of resistance bands for various levels of workout.",
+        "brand": "FlexFit",
+        "rating": 4.4
+      },
+      {
+        "id": 54,
+        "name": "Running Shoes",
+        "category": "Apparel",
+        "price": 49.99,
+        "stock": 25,
+        "description": "Comfortable running shoes with good cushioning.",
+        "brand": "RunFast",
+        "rating": 4.3
+      },
+      {
+        "id": 55,
+        "name": "Smartwatch",
+        "category": "Electronics",
+        "price": 149.99,
+        "stock": 15,
+        "description": "Smartwatch with fitness tracking and heart rate monitor.",
+        "brand": "TechTime",
+        "rating": 4.5
+      },
+      {
+        "id": 56,
+        "name": "Bluetooth Earbuds",
+        "category": "Electronics",
+        "price": 29.99,
+        "stock": 60,
+        "description": "Wireless Bluetooth earbuds with noise cancellation.",
+        "brand": "SoundWave",
+        "rating": 4.2
+      },
+      {
+        "id": 57,
+        "name": "Foam Roller",
+        "category": "Fitness",
+        "price": 24.99,
+        "stock": 28,
+        "description": "High-density foam roller for muscle recovery.",
+        "brand": "RollEase",
+        "rating": 4.6
+      },
+      {
+        "id": 58,
+        "name": "Protein Powder",
+        "category": "Nutrition",
+        "price": 34.99,
+        "stock": 50,
+        "description": "Whey protein powder for muscle building.",
+        "brand": "ProBulk",
+        "rating": 4.8
+      },
+      {
+        "id": 59,
+        "name": "Exercise Bike",
+        "category": "Fitness",
+        "price": 249.99,
+        "stock": 10,
+        "description": "Stationary bike with adjustable resistance levels.",
+        "brand": "CyclePro",
+        "rating": 4.5
+      },
+      {
+        "id": 60,
+        "name": "Water Bottle",
+        "category": "Accessories",
+        "price": 9.99,
+        "stock": 100,
+        "description": "Reusable water bottle with leak-proof lid.",
+        "brand": "HydraCool",
+        "rating": 4.1
+      },
+      {
+        "id": 61,
+        "name": "Jump Rope",
+        "category": "Fitness",
+        "price": 7.99,
+        "stock": 75,
+        "description": "Adjustable speed jump rope for cardio workouts.",
+        "brand": "CardioFit",
+        "rating": 4.2
+      },
+      {
+        "id": 62,
+        "name": "Cycling Gloves",
+        "category": "Apparel",
+        "price": 15.99,
+        "stock": 32,
+        "description": "Padded gloves for comfortable cycling.",
+        "brand": "BikeGrip",
+        "rating": 4.3
+      },
+      {
+        "id": 63,
+        "name": "Smart Scale",
+        "category": "Electronics",
+        "price": 39.99,
+        "stock": 18,
+        "description": "Digital scale with body composition analysis.",
+        "brand": "FitMeasure",
+        "rating": 4.4
+      },
+      {
+        "id": 64,
+        "name": "Pull-Up Bar",
+        "category": "Fitness",
+        "price": 29.99,
+        "stock": 12,
+        "description": "Doorway pull-up bar for upper body workout.",
+        "brand": "LiftMax",
+        "rating": 4.5
+      },
+      {
+        "id": 65,
+        "name": "Fitness Tracker",
+        "category": "Electronics",
+        "price": 79.99,
+        "stock": 22,
+        "description": "Fitness tracker with step count and sleep monitor.",
+        "brand": "TrackPro",
+        "rating": 4.3
+      },
+      {
+        "id": 66,
+        "name": "Elliptical Machine",
+        "category": "Fitness",
+        "price": 499.99,
+        "stock": 8,
+        "description": "Low-impact elliptical trainer for full-body workout.",
+        "brand": "SmoothStride",
+        "rating": 4.6
+      },
+      {
+        "id": 67,
+        "name": "Kettlebell",
+        "category": "Fitness",
+        "price": 19.99,
+        "stock": 45,
+        "description": "Cast iron kettlebell for strength training.",
+        "brand": "IronFit",
+        "rating": 4.4
+      },
+      {
+        "id": 68,
+        "name": "Running Shorts",
+        "category": "Apparel",
+        "price": 14.99,
+        "stock": 40,
+        "description": "Lightweight running shorts with moisture-wicking fabric.",
+        "brand": "RunActive",
+        "rating": 4.3
+      },
+      {
+        "id": 69,
+        "name": "Gym Bag",
+        "category": "Accessories",
+        "price": 29.99,
+        "stock": 20,
+        "description": "Spacious gym bag with multiple compartments.",
+        "brand": "FitCarry",
+        "rating": 4.5
+      },
+      {
+        "id": 70,
+        "name": "Foam Yoga Block",
+        "category": "Fitness",
+        "price": 12.99,
+        "stock": 55,
+        "description": "Foam block for support in yoga poses.",
+        "brand": "FlexBlock",
+        "rating": 4.3
+      },
+      {
+        "id": 71,
+        "name": "Pilates Ball",
+        "category": "Fitness",
+        "price": 8.99,
+        "stock": 65,
+        "description": "Mini exercise ball for pilates and core workouts.",
+        "brand": "CoreBalance",
+        "rating": 4.4
+      },
+      {
+        "id": 72,
+        "name": "Massage Gun",
+        "category": "Recovery",
+        "price": 99.99,
+        "stock": 10,
+        "description": "Portable massage gun for muscle relaxation.",
+        "brand": "ReliefPro",
+        "rating": 4.6
+      },
+      {
+        "id": 73,
+        "name": "Speed Training Ladder",
+        "category": "Fitness",
+        "price": 19.99,
+        "stock": 40,
+        "description": "Agility ladder for speed and coordination drills.",
+        "brand": "AgilityMax",
+        "rating": 4.3
+      },
+      {
+        "id": 74,
+        "name": "Weightlifting Belt",
+        "category": "Fitness",
+        "price": 29.99,
+        "stock": 25,
+        "description": "Sturdy belt for weightlifting support.",
+        "brand": "PowerLift",
+        "rating": 4.4
+      },
+      {
+        "id": 75,
+        "name": "Boxing Gloves",
+        "category": "Fitness",
+        "price": 39.99,
+        "stock": 15,
+        "description": "Durable boxing gloves for training.",
+        "brand": "StrikeForce",
+        "rating": 4.5
+      },
+      {
+        "id": 76,
+        "name": "Tennis Racket",
+        "category": "Sports",
+        "price": 49.99,
+        "stock": 20,
+        "description": "Lightweight tennis racket with a comfortable grip.",
+        "brand": "AceShot",
+        "rating": 4.4
+      },
+      {
+        "id": 77,
+        "name": "Swim Goggles",
+        "category": "Sports",
+        "price": 12.99,
+        "stock": 60,
+        "description": "Anti-fog swim goggles with UV protection.",
+        "brand": "AquaClear",
+        "rating": 4.2
+      },
+      {
+        "id": 78,
+        "name": "Camping Tent",
+        "category": "Outdoors",
+        "price": 79.99,
+        "stock": 5,
+        "description": "Two-person camping tent with waterproof material.",
+        "brand": "CampMate",
+        "rating": 4.3
+      },
+      {
+        "id": 79,
+        "name": "Hiking Backpack",
+        "category": "Outdoors",
+        "price": 59.99,
+        "stock": 30,
+        "description": "Durable backpack with multiple compartments.",
+        "brand": "TrailPack",
+        "rating": 4.5
+      },
+      {
+        "id": 80,
+        "name": "Sleeping Bag",
+        "category": "Outdoors",
+        "price": 39.99,
+        "stock": 15,
+        "description": "Warm and compact sleeping bag for camping.",
+        "brand": "SleepTight",
+        "rating": 4.6
+      },
+      {
+        "id": 81,
+        "name": "Yoga Wheel",
+        "category": "Fitness",
+        "price": 24.99,
+        "stock": 18,
+        "description": "Yoga wheel for stretching and improving flexibility.",
+        "brand": "FlexRing",
+        "rating": 4.4
+      },
+      {
+        "id": 82,
+        "name": "Electric Scooter",
+        "category": "Transport",
+        "price": 299.99,
+        "stock": 7,
+        "description": "Foldable electric scooter with long battery life.",
+        "brand": "E-Swift",
+        "rating": 4.5
+      },
+      {
+        "id": 83,
+        "name": "Golf Clubs Set",
+        "category": "Sports",
+        "price": 199.99,
+        "stock": 10,
+        "description": "Complete set of golf clubs for beginners.",
+        "brand": "GreenPro",
+        "rating": 4.3
+      },
+      {
+        "id": 84,
+        "name": "Digital Camera",
+        "category": "Electronics",
+        "price": 249.99,
+        "stock": 8,
+        "description": "Compact digital camera with 20MP resolution.",
+        "brand": "CapturePro",
+        "rating": 4.4
+      },
+      {
+        "id": 85,
+        "name": "Fishing Rod",
+        "category": "Outdoors",
+        "price": 29.99,
+        "stock": 25,
+        "description": "Durable fishing rod suitable for fresh and saltwater.",
+        "brand": "AnglerMax",
+        "rating": 4.2
+      },
+      {
+        "id": 86,
+        "name": "Trail Running Shoes",
+        "category": "Apparel",
+        "price": 69.99,
+        "stock": 12,
+        "description": "Water-resistant trail running shoes with grip.",
+        "brand": "TrailMaster",
+        "rating": 4.6
+      },
+      {
+        "id": 87,
+        "name": "Adjustable Bench",
+        "category": "Fitness",
+        "price": 149.99,
+        "stock": 8,
+        "description": "Adjustable bench for various strength exercises.",
+        "brand": "BenchPlus",
+        "rating": 4.7
+      },
+      {
+        "id": 88,
+        "name": "Rowing Machine",
+        "category": "Fitness",
+        "price": 399.99,
+        "stock": 6,
+        "description": "Rowing machine with adjustable resistance.",
+        "brand": "RowPro",
+        "rating": 4.5
+      },
+      {
+        "id": 89,
+        "name": "Climbing Rope",
+        "category": "Outdoors",
+        "price": 29.99,
+        "stock": 20,
+        "description": "High-strength rope for climbing and mountaineering.",
+        "brand": "PeakRope",
+        "rating": 4.4
+      },
+      {
+        "id": 90,
+        "name": "Camping Stove",
+        "category": "Outdoors",
+        "price": 39.99,
+        "stock": 15,
+        "description": "Portable camping stove with adjustable flame.",
+        "brand": "CampFire",
+        "rating": 4.3
+      },
+      {
+        "id": 91,
+        "name": "Ab Roller",
+        "category": "Fitness",
+        "price": 19.99,
+        "stock": 30,
+        "description": "Core-strengthening ab roller for home workouts.",
+        "brand": "CoreMax",
+        "rating": 4.2
+      },
+      {
+        "id": 92,
+        "name": "Inline Skates",
+        "category": "Sports",
+        "price": 49.99,
+        "stock": 18,
+        "description": "Adjustable inline skates for recreational use.",
+        "brand": "RollerZone",
+        "rating": 4.5
+      },
+      {
+        "id": 93,
+        "name": "Trekking Poles",
+        "category": "Outdoors",
+        "price": 29.99,
+        "stock": 28,
+        "description": "Lightweight trekking poles with adjustable length.",
+        "brand": "TrailGuide",
+        "rating": 4.4
+      },
+      {
+        "id": 94,
+        "name": "Meditation Cushion",
+        "category": "Wellness",
+        "price": 24.99,
+        "stock": 20,
+        "description": "Comfortable cushion for meditation and yoga.",
+        "brand": "MindRelax",
+        "rating": 4.7
+      },
+      {
+        "id": 95,
+        "name": "Skateboard",
+        "category": "Sports",
+        "price": 39.99,
+        "stock": 17,
+        "description": "High-quality skateboard for tricks and cruising.",
+        "brand": "BoardPro",
+        "rating": 4.5
+      },
+      {
+        "id": 96,
+        "name": "Hand Weights",
+        "category": "Fitness",
+        "price": 24.99,
+        "stock": 35,
+        "description": "Pair of dumbbells for resistance training.",
+        "brand": "StrengthFit",
+        "rating": 4.4
+      },
+      {
+        "id": 97,
+        "name": "Balance Board",
+        "category": "Fitness",
+        "price": 29.99,
+        "stock": 20,
+        "description": "Board for improving balance and stability.",
+        "brand": "BalanceCore",
+        "rating": 4.3
+      },
+      {
+        "id": 98,
+        "name": "Parachute Trainer",
+        "category": "Fitness",
+        "price": 19.99,
+        "stock": 15,
+        "description": "Resistance parachute for sprint training.",
+        "brand": "SpeedBoost",
+        "rating": 4.1
+      },
+      {
+        "id": 99,
+        "name": "Self-Inflating Sleeping Pad",
+        "category": "Outdoors",
+        "price": 34.99,
+        "stock": 12,
+        "description": "Compact self-inflating pad for comfortable sleep.",
+        "brand": "SleepEasy",
+        "rating": 4.5
+      },
+      {
+        "id": 100,
+        "name": "Ski Goggles",
+        "category": "Sports",
+        "price": 29.99,
+        "stock": 22,
+        "description": "Anti-fog and UV-protective goggles for skiing.",
+        "brand": "SnowVision",
+        "rating": 4.6
       }
   ]
   

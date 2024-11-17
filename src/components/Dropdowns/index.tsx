@@ -59,7 +59,7 @@ export default function Dropdown({ value, onChange, itemTemplate, data, divide, 
                 </div>
                 <div
                     className={`${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-0'} ${themeCard} origin-top-right w-full absolute right-0 mt-1 rounded-md shadow-lg bg-white dark:bg-slate-700 ring-1 ring-black ring-opacity-5 transform transition duration-200 ease-out`}>
-                    <div className={`max-h-56 overflow-auto bar-scrool ${divideClassName}`} role="menu" aria-orientation="vertical" aria-labelledby="options-menu" >
+                    <div className={`max-h-64 overflow-auto bar-scrool ${divideClassName}`} role="menu" aria-orientation="vertical" aria-labelledby="options-menu" >
                         {
                             data.map((val, idx) => {
                                 return (

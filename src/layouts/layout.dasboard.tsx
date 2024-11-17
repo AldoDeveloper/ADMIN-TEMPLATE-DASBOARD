@@ -13,7 +13,7 @@ export default function LayoutDasboard(): React.ReactNode {
     return (
         <React.Fragment>
             <ContextDasboard.Provider value={{ propsDasboard, setDasboard }}>
-                <div className="w-full min-h-screen bg-slate-50 dark:bg-slate-900 overflow-x-hidden">
+                <div className="w-full min-h-screen bg-slate-100 dark:bg-slate-900 overflow-x-hidden">
                     <div className="container mx-auto px-5 py-3">
                         <div className="flex flex-1">
                             <LayoutSidebar />

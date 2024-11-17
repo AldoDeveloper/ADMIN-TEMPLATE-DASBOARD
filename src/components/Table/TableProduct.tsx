@@ -73,7 +73,6 @@ export default function TableProduct() : React.ReactNode {
                             className="px-2 py-1 bg-white ring-1 ring-slate-300"
                             label={<BsSearch size={15} />}
                             bgColor="secondary" />
-
                         <Button
                             size="sm"
                             className="px-2 py-1 bg-white ring-1 ring-slate-300"

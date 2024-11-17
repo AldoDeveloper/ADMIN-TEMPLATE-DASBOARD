@@ -248,7 +248,7 @@ export default class RevenueChart extends React.Component<PropsRevenueChart, Sta
             <React.Fragment>
                 <Card
                     header={this.headerCard}
-                    className="min-h-44 bg-white dark:bg-slate-700"
+                    className="min-h-44 bg-white dark:bg-slate-800"
                     darkMode={false}
                     bodyClassName="px-0 py-2">
                     <ResponsiveContainer width={"100%"} height={200}>

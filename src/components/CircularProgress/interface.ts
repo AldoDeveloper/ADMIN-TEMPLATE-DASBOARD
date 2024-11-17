@@ -1,6 +1,9 @@
 
 export interface PropsCircularProgress{
-    value : number;
+    value        : number;
     strokeColor ?: string | "success" | "info" | "warning" | "danger";
-    theme?: boolean
-}
+    theme       ?: boolean;
+    sizeText    ?: number;
+    trailStroke ?: string;
+    strokeWidth ?: number;
+};

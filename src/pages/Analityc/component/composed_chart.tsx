@@ -101,7 +101,7 @@ export default class ComposedChart extends React.Component<any, StateComponent |
             return (
                 <label className="inline-flex w-full items-center text-white font-semibold text-xs">
                     <span><BsDownload size={14} className="mr-2" /></span>
-                    <span className="text-xs">Download</span>
+                    <span className="text-xs">Download More</span>
                 </label>
             )
         };

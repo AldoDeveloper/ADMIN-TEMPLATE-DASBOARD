@@ -1,11 +1,11 @@
 import React from "react";
 
 interface PropsComponent extends React.HTMLAttributes<HTMLDivElement>{
-    children  ?: React.ReactNode | React.ReactElement;
-    header    ?: React.ReactNode | (() => React.ReactNode);
-    darkMode  ?: boolean;
-    bodyClassName ?: string;
-    headerClassName?: string
+    children        ?: React.ReactNode | React.ReactElement;
+    header          ?: React.ReactNode | (() => React.ReactNode);
+    darkMode        ?: boolean;
+    bodyClassName   ?: string;
+    headerClassName ?: string
 };
 
 const Card: React.FC<PropsComponent> = ({ children, className, header, darkMode, headerClassName, bodyClassName, ...rest }: PropsComponent) => {

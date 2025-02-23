@@ -13,7 +13,7 @@ export default function ValidationLogin(t: TFunction) {
             password: Joi.string().pattern(REG_PASSWORD).required()
         })
         .messages({
-            'alternatives.match'  : t("errors.alternatives.match"),
+        'alternatives.match'  : t("errors.alternatives.match"),
             'string.empty'        : t("errors.required"),
         })
         .required()

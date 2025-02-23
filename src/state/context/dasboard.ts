@@ -5,10 +5,8 @@ import React from "react";
 export const PropsContextDasboardData = atom<Partial<PropsContextDasboard>>({});
 
 const StateContextDasboard = atom(
-    (get) => get(PropsContextDasboardData), 
-    (get, set, type: TypesContextDasboard, value: Partial<PropsContextDasboard>) => {
-
-        const payload = get(PropsContextDasboardData);
+    (get) => get(PropsContextDasboardData),
+    (__, set, type: TypesContextDasboard, value: Partial<PropsContextDasboard>) => {
 
         switch(type){
 
@@ -35,12 +33,12 @@ const StateContextDasboard = atom(
 );
 
 StateContextDasboard.onMount = function(set){
-    set("theme", { theme: "red" })
+    set("theme", { theme: "md-purple" })
 };
 
 export const ContextDasboard = React.createContext<{
     propsDasboard : Partial<PropsContextDasboard>,
-    setDasboard   : (types: TypesContextDasboard, value: Partial<PropsContextDasboard>) => void 
+    setDasboard   : (types: TypesContextDasboard, value: Partial<PropsContextDasboard>) => void
 }>({} as any);
 
 export default StateContextDasboard;

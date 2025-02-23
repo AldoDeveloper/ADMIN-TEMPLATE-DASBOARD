@@ -35,7 +35,7 @@ export default function Login() : React.ReactNode {
                 <form onSubmit={handleSubmit(submitted)}>
                     <InputText
                         register={register("username", { required: true })}
-                        type="text"
+                        type="text" 
                         label="Email"
                         sizeType="lg"
                         classNameLabel="font-semibold text-slate-400 text-[1rem]"

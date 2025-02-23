@@ -18,7 +18,6 @@ export default {
     },
 
     extend: {
-
       stroke: {
         "tq-blue-50": "#edfefe",
         "tq-blue-100": "#d1fbfc",
@@ -120,6 +119,10 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-25%)' },
         },
+        shimmer: {
+          '100%': { backgroundPosition: '100% 0' },
+          '0%': { backgroundPosition: '-100% 0' },
+        },
       },
 
       animation: {
@@ -129,6 +132,7 @@ export default {
         fadeInLeft: 'fadeInLeft 0.7s ease-out',
         fadeInRight: 'fadeInRight 0.7s ease-out',
         bounces: 'bounce 0.7s infinite',
+        shimmer: 'shimmer var(--animation-skelton-duration, 2s) infinite linear',
       },
 
       ringColor: {

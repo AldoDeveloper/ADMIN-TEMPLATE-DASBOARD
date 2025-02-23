@@ -1,7 +1,7 @@
 import { ContextApp } from "@/state/context/app";
 import { getRandomInt } from "@/utilities/random";
 import React from "react";
-import { BsCaretDownFill, BsCaretLeftFill, BsCaretRightFill, BsChevronDown, BsChevronRight, BsFile } from 'react-icons/bs';
+import { BsCaretDownFill, BsCaretLeftFill, BsCaretRightFill, BsFile } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { NavLink } from "react-router-dom";
 
@@ -116,8 +116,8 @@ export default class SidebarNode extends React.Component<TreeNodeProps, StateSid
 
     public render(): React.ReactNode {
 
-        const { getApp } = this.context
-        const hasChildren = this.props.children && this.props.children.length > 0;
+        const { getApp }     = this.context
+        const hasChildren    = this.props.children && this.props.children.length > 0;
         const isOpenChildren = this.state.isOpenChildren;
         const isDark = getApp.darkMode === "dark";
 
@@ -161,7 +161,6 @@ export default class SidebarNode extends React.Component<TreeNodeProps, StateSid
                     variants={variantAnimation}
                     exit={"exite"}
                     transition={{ duration: 0.3 }}
-                    // ref={!hasChildren ? this.ref as any : undefined as any}
                     className="ml-3 py-1">
                     <li className={`space-y-3`}>
                         {

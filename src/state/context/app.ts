@@ -7,8 +7,8 @@ export const PropsContextAppData = atomWithStorage<Partial<PropsContextApp>>("ap
 
  const StateContextApp = atom(
     (get) => get(PropsContextAppData),
-    (get, set, type: TypeContexApp, value: Partial<PropsContextApp>) => {
-        const payload = get(PropsContextAppData);
+    (__, set, type: TypeContexApp, value: Partial<PropsContextApp>) => {
+        
         switch(type){
             case "lang":
                 set(PropsContextAppData, (args) => {

@@ -54,7 +54,7 @@ export const barValueChart : Array<PropsBarData> = Array.from<PropsBarData>({len
         down: getRandomInt(10, 1000),
         created_at: new Date().toLocaleTimeString()
     }
-})
+});
 
 export const ThemeStrokeColor : any= {
 

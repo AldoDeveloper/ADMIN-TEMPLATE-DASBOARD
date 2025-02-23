@@ -5,9 +5,10 @@ import NavbarDasboard from "@/components/Navbar/NavbarDasboard";
 import TopScrool from "@/components/TopScrool";
 import StateContextDasboard, { ContextDasboard } from "@/state/context/dasboard";
 import { useAtom } from "jotai";
+import { FooterDashboard } from '@component/Footer';
 
 export default function LayoutDasboard(): React.ReactNode {
-    
+
     const [propsDasboard, setDasboard] = useAtom(StateContextDasboard);
 
     return (
@@ -20,6 +21,7 @@ export default function LayoutDasboard(): React.ReactNode {
                             <div className={`text-slate-600 w-full inline-block dark:text-slate-200 transition-all duration-500 ${propsDasboard.sidebar ? "" : "lg:ml-[15.5rem] xl:ml-[15.5rem]"} md:ml-0`}>
                                 <NavbarDasboard />
                                 <Outlet />
+                                <FooterDashboard/>
                             </div>
                         </div>
                     </div>

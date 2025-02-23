@@ -405,7 +405,7 @@ export default class TableDasboard extends React.Component<PropsComponentTable, 
         const NumberPagination = (): React.ReactNode => {
 
             const { pageIndex, pageSize } = pagination;
-            const totalPages = table.getPageCount();
+            const totalPages  = table.getPageCount();
             const currentPage = pageIndex + 1;
 
             return (
@@ -421,7 +421,7 @@ export default class TableDasboard extends React.Component<PropsComponentTable, 
                                 text-slate-700 
                                 dark:text-slate-50 
                                 font-semibold">
-                                {currentPage - 1}
+                                { currentPage - 1 }
                             </div>
                         )
                     }
@@ -435,7 +435,7 @@ export default class TableDasboard extends React.Component<PropsComponentTable, 
                             text-slate-50 
                             dark:text-slate-50 
                             font-semibold">
-                        {currentPage}
+                        { currentPage }
                     </div>
                     {
                         currentPage < totalPages - 1 && (
@@ -466,7 +466,7 @@ export default class TableDasboard extends React.Component<PropsComponentTable, 
         }
         return (
             <React.Fragment>
-                <Card darkMode={false} className="w-full min-h-44 bg-white dark:bg-slate-800">
+                <Card darkMode className="w-full min-h-44 bg-white">
                     <this.renderHeadOption {...table} />
                     <div className="aspect-w-16 aspect-h-9 overflow-x-auto">
                         <table className={`border-collapse rounded-sm shadow-sm shadow-slate-300 dark:shadow-none min-w-full max-md:min-w-[90vh] table-fixed`}>
@@ -496,7 +496,8 @@ export default class TableDasboard extends React.Component<PropsComponentTable, 
                                                                                 asc: <span className="text-lg text-gray-400">&#x1F839;</span>,
                                                                                 desc: <span className="text-lg text-gray-400">&#x1F83B;</span>,
                                                                             }
-                                                                            [head.column.getIsSorted() as string] ?? <span className="font-light text-xs"> &#x1F859;</span>}
+                                                                            [head.column.getIsSorted() as string] ?? <span className="font-light text-xs"> &#x1F859;</span>
+                                                                        }
                                                                     </div>
                                                                 </>
                                                             )
@@ -508,7 +509,6 @@ export default class TableDasboard extends React.Component<PropsComponentTable, 
                                     ))
                                 }
                             </thead>
-
                             <tbody>
                                 {
                                     table.getRowModel().rows.map((data, idx) => (
@@ -552,7 +552,7 @@ export default class TableDasboard extends React.Component<PropsComponentTable, 
                                         rounded={false}
                                         onClick={table.previousPage}
                                         disabled={!table.getCanPreviousPage()}
-                                        className={`p-0 bg-transparent focus:ring-0 active:ring-0 ${!table.getCanPreviousPage() ? "cursor-not-allowed" : ""}`}
+                                        className={`p-0 w-5 h-5 rounded-full bg-transparent focus:ring-0 active:ring-0 ${!table.getCanPreviousPage() ? "cursor-not-allowed" : ""}`}
                                         label={
                                             <>
                                                 <BsChevronLeft size={12} />

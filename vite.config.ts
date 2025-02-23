@@ -6,7 +6,7 @@ import { resolve } from 'path';
 export default defineConfig({
   plugins: [ react() ],
   server:{ 
-    open : false,
+    open : false, 
     host : '0.0.0.0',
     port : 5000
   },

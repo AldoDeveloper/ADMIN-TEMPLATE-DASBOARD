@@ -7,16 +7,14 @@ import { ContextApp } from '@/state/context/app';
 
 const OverlayPanel: React.FC<OverlayPanelProps> = ({ children, isOpen, onChange, item, iconClose }) => {
 
-    const { getApp } = React.useContext(ContextApp);
+    const { getApp }      = React.useContext(ContextApp);
     const refClickaHandle = React.useRef<HTMLDivElement>(null);
-    const refOverlay = React.useRef<HTMLDivElement>(null);
+    const refOverlay      = React.useRef<HTMLDivElement>(null);
 
-    const isDark  = getApp.darkMode === "dark";
+    const isDark = getApp.darkMode === "dark";
 
     const refMouseDown = React.useRef<HTMLDivElement>(null);
-
     const [isRight, setIsRight] = React.useState<boolean>(false);
-
 
     const RenderItem: React.FC<{}> = ({ }) => {
 
@@ -51,7 +49,7 @@ const OverlayPanel: React.FC<OverlayPanelProps> = ({ children, isOpen, onChange,
 
             if (isOpen && refClickaHandle.current && refOverlay.current) {
 
-                const handleRect = refClickaHandle.current.getBoundingClientRect();
+                const handleRect  = refClickaHandle.current.getBoundingClientRect();
                 const overlatRect = refOverlay.current.getBoundingClientRect();
 
                 if ((handleRect.left + overlatRect.width) > window.innerWidth) {

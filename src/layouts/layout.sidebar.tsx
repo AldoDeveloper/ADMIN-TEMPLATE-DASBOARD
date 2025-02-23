@@ -1,20 +1,16 @@
 import React from "react";
 import classNames from "classnames";
-import { BsChevronDown, BsChevronRight, BsHouseFill } from "react-icons/bs";
 import { ContextDasboard } from "@/state/context/dasboard";
-import { dataSelect, ThemeStrokeColor } from "@/data/dasboard";
-import { TreeSelect } from "@/components/Tree";
+import { ThemeStrokeColor } from "@/data/dasboard";
 import { SidebarList } from "@/components/Sidebar";
 import { dataSidebar } from "@/data/sidebar";
 
 export default function LayoutSidebar() : React.ReactNode {
+ 
+    const { propsDasboard }   = React.useContext(ContextDasboard);
+    const classSidebar        = classNames({ "translate-x-0 w-0": propsDasboard.sidebar, "-translate-x-[110%] w-60": !propsDasboard.sidebar });
 
-    const { propsDasboard } = React.useContext(ContextDasboard);
-    const classSidebar      = classNames({ "translate-x-0 w-0": propsDasboard.sidebar, "-translate-x-[110%] w-60": !propsDasboard.sidebar })
-    
-    const [isOpen, setIsOpen] = React.useState(false);
-    const theme          = propsDasboard.theme;
-    const toggleDropdown = () => setIsOpen(!isOpen);
+    const theme  = propsDasboard.theme;
 
     const bgClassName = classNames({
         "bg-red-500"       : theme === "red",
@@ -34,7 +30,6 @@ export default function LayoutSidebar() : React.ReactNode {
 
     return (
         <React.Fragment>
-            {/* Sidebar */}
             <aside className={`fixed overflow-y-scroll top-3 left-3 shadow-xl rounded-lg bg-white dark:bg-slate-800 text-white transition-all duration-500 transform ${classSidebar} lg:translate-x-0 h-[96vh] disabled-scrool`}>
                 <div className="flex justify-start gap-3 items-center pl-8 border-b py-5">
                     <picture>
@@ -45,8 +40,8 @@ export default function LayoutSidebar() : React.ReactNode {
                 </div>
                 <nav className="px-5 py-4">
                     <SidebarList 
-                        space="5"
-                        data={dataSidebar(findHexColor)}/>
+                         space="5" 
+                         data={dataSidebar(findHexColor)}/>
                 </nav>
             </aside>
         </React.Fragment>

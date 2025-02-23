@@ -31,4 +31,8 @@ export declare global{
         brand: string;
         rating: number;
       }
+
+    type TypeOptions<TYPE> = {
+        [key in typeof TYPE] : boolean
+    }
 }

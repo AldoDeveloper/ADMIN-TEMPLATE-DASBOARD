@@ -7,14 +7,9 @@ import Card from "@/components/Card";
 import Button from "@/components/Button";
 import { getRandomInt } from "@/utilities/random";
 import html2canvas from 'html2canvas-pro';
+import { StateOptionsComposedChart } from "../interface";
 
-type StateComponent = {
-    ipw: boolean;
-    ipm: boolean;
-    data: typeof getDataComposedChart;
-};
-
-export default class ComposedChart extends React.Component<any, StateComponent | any> {
+export default class ComposedChart extends React.Component<any, StateOptionsComposedChart<typeof getDataComposedChart[0]> | any> {
 
     private intervalIdData: any;
     private refSvg: any;
@@ -79,7 +74,7 @@ export default class ComposedChart extends React.Component<any, StateComponent |
                                 <input
                                     checked={this.state?.[`${val.value}`]}
                                     type="checkbox"
-                                    onChange={() => this.setState((valData: StateComponent) => ({ ...valData, [`${val.value}`]: !this.state?.[`${val.value}`] }))}
+                                    onChange={() => this.setState((valData: StateOptionsComposedChart) => ({ ...valData, [`${val.value}`]: !this.state?.[`${val.value}`] }))}
                                     className="peer hidden" />
                                 <span style={{ borderColor: val.color, backgroundColor: this.state?.[`${val.value}`] ? val.color : "" }} className={`inline-flex mr-2 gap-3 justify-center items-center w-4 h-4 rounded-md border peer-checked:bg-[${val.color}]`}>
                                     {
@@ -163,7 +158,7 @@ export default class ComposedChart extends React.Component<any, StateComponent |
         )
     }
 
-    public render(): React.ReactNode {
+    public render() : React.ReactNode {
         return (
             <React.Fragment>
                 <Card

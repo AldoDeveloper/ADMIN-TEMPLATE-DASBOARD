@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import NavbarAuth from "@/components/Navbar";
 import { ContextApp } from "@/state/context/app";
 import { Footer } from "@/components/Footer";
@@ -17,6 +17,16 @@ export default function LayoutAuth(): React.ReactNode {
 
     const { pathname }    = useLocation();
     const isResetPassword = pathname.indexOf("reset-password") != -1;
+    const navigate        = useNavigate();
+
+    const redirectIsSignIn = pathname.indexOf("sign-in") === -1 || pathname.indexOf("sign-up") === -1
+
+    React.useEffect(() => {
+        if(redirectIsSignIn){
+            navigate("/auth/sign-in");
+            return;
+        }
+    }, [])
 
     const toogleChangeTheme = async () => {
         setApp("setDarkMode", { darkMode: isDark ? "light" : "dark" })

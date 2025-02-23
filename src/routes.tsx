@@ -99,6 +99,6 @@ const router = createBrowserRouter([
             }
         ]
     }
-])
+]);
 
 export const Routes = (): React.ReactNode => <RouterProvider router={router} fallbackElement={<Loading />} />

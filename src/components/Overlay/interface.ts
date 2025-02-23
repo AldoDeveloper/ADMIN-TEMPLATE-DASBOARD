@@ -15,3 +15,10 @@ export interface OverlayPanelProps {
     item      ?: React.ReactNode | (() => React.ReactNode);
     iconClose ?: boolean;
 };
+
+export interface PropsOverlayPanelPrime{
+    itemSelected ?: React.ReactNode | ((props: any) => React.ReactNode);
+    label     : string
+    className ?: string;
+    children  : React.ReactNode | JSX.Element;
+};

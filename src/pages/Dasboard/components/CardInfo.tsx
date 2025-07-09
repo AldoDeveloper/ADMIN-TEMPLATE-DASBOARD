@@ -19,7 +19,7 @@ const CardInfoAnimationSkelton: React.FC<any> = () => {
                 darkMode
                 header={<><Skelton className="w-[10rem] mx-6 my-3 mb-2 h-5" /></>}
                 bodyClassName="px-4 py-3"
-                className="bg-white h-44">
+                className="bg-white min-h-44">
                 <div className="flex gap-3 items-center">
                     <Skelton className="w-[8.5rem] m-2 h-7 px-4" />
                 </div>
@@ -146,7 +146,7 @@ function CardInfo(): React.ReactNode {
                         <Card
                             darkMode
                             bodyClassName="px-4 py-3"
-                            className="bg-white h-44">
+                            className="bg-white min-h-44">
                             {/* <h1 className="text-start text-lg font-semibold text-gray-500">Sales Product</h1> */}
 
                             <div className="flex items-center justify-between">
@@ -175,7 +175,7 @@ function CardInfo(): React.ReactNode {
                     !loading && (
                         <Card
                             bodyClassName="px-4 py-3"
-                            className="bg-white h-44">
+                            className="bg-white min-h-44">
                             <div className="flex items-center justify-between">
                                 <div>
                                     <div className="flex w-14 h-10 mb-2 justify-center items-center rounded-lg bg-green-100">
@@ -202,7 +202,7 @@ function CardInfo(): React.ReactNode {
                     !loading && (
                         <Card
                             bodyClassName="px-4 py-3"
-                            className="bg-white h-44">
+                            className="bg-white min-h-44">
                             <div className="flex items-center justify-between">
                                 <div>
                                     <div className="flex w-14 h-10 mb-2 justify-center items-center rounded-lg bg-red-100">
@@ -229,7 +229,7 @@ function CardInfo(): React.ReactNode {
                     !loading && (
                         <Card
                             bodyClassName="px-4 py-3"
-                            className="bg-white h-44">
+                            className="bg-white min-h-44">
                             <div className="flex items-center justify-between">
                                 <div>
                                     <div className="flex w-14 h-10 mb-2 justify-center items-center rounded-lg bg-yellow-100">

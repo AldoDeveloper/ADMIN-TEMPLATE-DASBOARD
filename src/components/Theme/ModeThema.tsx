@@ -2,24 +2,24 @@ import useMouseDown from "@/hooks/useMouseDown";
 import useThemaSystem from "@/hooks/useThema";
 import { ContextApp } from "@/state/context/app";
 import classNames from "classnames";
-import React from "react";
+import { Button } from "primereact/button";
+import React, { ReactNode } from "react";
 import { BsBrightnessHigh, BsFillMoonStarsFill, BsLaptop } from "react-icons/bs";
 
-type Attr = Partial<{ name: string, size: number, icon: React.ReactNode }>;
-type PropsThemeList = Array<Attr>;
+type Attr = Partial<{ name: string, size: number, icon: (() => ReactNode) }>;
 
 const List_Theme = [
     {
         name: "Light",
-        icon: <BsBrightnessHigh size={18}/>
+        icon: () => <BsBrightnessHigh size={18}/>
     },
     {
         name: "Dark",
-        icon: <BsFillMoonStarsFill size={18}/>
+        icon: () =>  <BsFillMoonStarsFill size={18}/>
     },
     {
         name: "System",
-        icon: <BsLaptop size={18}/>
+        icon: () =>  <BsLaptop size={18}/>
     },
 ];
 
@@ -52,10 +52,10 @@ const ModeTheme : React.FC<any> = () => {
                 <div 
                     className="inline-block cursor-pointer" 
                     onClick={() => setToogle(!toogle)}>
-                   { mode.icon }
+                    <BsLaptop/>
                 </div>
 
-                <div className={`${showDropdownList} z-[10000] origin-top-left w-28 mt-4 absolute right-0 shadow-lg rounded-lg bg-white dark:bg-slate-700`}>
+                <div className={`${showDropdownList} z-[1000] origin-top-left w-28 mt-4 absolute right-0 shadow-lg rounded-lg bg-white dark:bg-slate-700`}>
                     <div className="max-h-60 overflow-auto" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                         {
                             List_Theme.map((val, index) => (
@@ -65,7 +65,7 @@ const ModeTheme : React.FC<any> = () => {
                                     className="block list-none px-4 font-semibold cursor-pointer hover:rounded-lg dark:hover:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-500 py-[0.45rem] text-sm text-gray-500 dark:text-gray-200"
                                     key={index}>
                                    <div className="flex items-center gap-3 justify-start">
-                                        {val.icon}
+                                        { val?.icon() }
                                         <span>{val.name}</span>
                                    </div>
                                 </li>

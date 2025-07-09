@@ -219,7 +219,7 @@ export default {
                     'h-6 w-6 rounded-full border-2 text-gray-700 transition duration-200 ease-in-out',
                     context.checked
                         ? 'border-blue-500 bg-blue-500 dark:border-blue-400 dark:bg-blue-400 peer-hover:bg-blue-700 peer-hover:border-blue-700'
-                        : 'border-gray-300 bg-white dark:border-blue-900/40 dark:bg-slate-800 peer-hover:border-blue-500',
+                        : 'border-slate-300 bg-white dark:border-blue-900/40 dark:bg-slate-800 peer-hover:border-blue-500',
                     {
                         'hover:border-blue-500 focus:shadow-input-focus focus:outline-none focus:outline-offset-0 dark:hover:border-blue-400 dark:focus:shadow-[inset_0_0_0_0.2rem_rgba(147,197,253,0.5)]': !context.disabled,
                         'cursor-default opacity-60': context.disabled,
@@ -258,14 +258,14 @@ export default {
                 className: classNames(
                     'flex items-center justify-center',
                     'border-2 w-6 h-6 text-gray-600 rounded-lg transition-colors duration-200',
-                    context.checked ? 'border-blue-500 bg-blue-500 dark:border-blue-400 dark:bg-blue-400' : 'border-gray-300 bg-white dark:border-blue-900/40 dark:bg-slate-800',
+                    context.checked ? 'border-blue-500 bg-blue-500 dark:border-blue-400 dark:bg-blue-400' : 'border-slate-100 bg-white dark:border-blue-900/40 dark:bg-slate-800',
                     {
                         'hover:border-blue-500 dark:hover:border-blue-400 focus:outline-none focus:outline-offset-0 focus:shadow-[0_0_0_0.2rem_rgba(191,219,254,1)] dark:focus:shadow-[inset_0_0_0_0.2rem_rgba(147,197,253,0.5)]': !context.disabled,
                         'cursor-default opacity-60': context.disabled
                     }
                 )
             }),
-            checkboxicon: 'w-4 h-4 transition-all duration-200 text-white text-base dark:text-gray-900',
+            checkboxicon: 'w-4 h-4 transition-all duration-200 text-white text-base dark:text-slate-900',
             transition: TRANSITIONS.overlay
         },
         bodyrow: ({ context }: any) => ({

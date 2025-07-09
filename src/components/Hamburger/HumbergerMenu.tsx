@@ -2,7 +2,7 @@ import React from "react";
 import { PropsMenuHamburger } from "./interface";
 
 const HamburgerMenu: React.FC<PropsMenuHamburger> = ({ onChange, visible }) => {
-    
+
     return (
         <React.Fragment>
             <button

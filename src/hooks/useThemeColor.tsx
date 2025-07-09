@@ -1,34 +1,50 @@
 
-import { PropsContextDasboard } from "@/state/context/interface";
-import classNames from "classnames";
+import { ThemeStrokeColor } from "@/data/dasboard";
+import { ContextDasboard } from "@/state/context/dasboard";
+import { useContext } from "react";
 
-export default function useThemeColorDasboard(propsContextDasboard: Partial<PropsContextDasboard> ,opactiy: string, option: "bg" | "text" = 'bg') : string {
+export default function useThemeColorDasboard(opactiy: string = "500"){
 
-    switch (propsContextDasboard.theme) {
+    const dasboardPath = window.location.pathname.indexOf('/dasboard') !== -1;  
 
-        case "md-purple":
-            return classNames({
-                [`bg-md-purple-${opactiy}`]: option   === "bg",
-                [`text-md-purple-${opactiy}`]: option === 'text'
-            });
+    if(dasboardPath){
+        const { propsDasboard } = useContext(ContextDasboard);
 
-        case "green":
-            return classNames({
-                [`bg-green-${opactiy}`]  : option   === "bg",
-                [`text-green-${opactiy}`]: option === 'text'
-            });
-
-        case "red":
-            return classNames({
-                [`bg-red-${opactiy}`]  : option === "bg",
-                [`text-red-${opactiy}`]: option === 'text'
-            });
-
-        default:
-            return classNames({
-                [`bg-tq-blue-${opactiy}`]   : option === "bg",
-                [`text-tq-blue-${opactiy}`] : option === 'text'
-            });
+        const textClass = `text-${propsDasboard?.theme}-${opactiy}`;
+        const bgClass   = `bg-${propsDasboard?.theme}-${opactiy}`;
+        const hexColor  = ThemeStrokeColor[`${propsDasboard?.theme}-${opactiy}`];
+    
+        return { textClass, bgClass, hexColor  }
     }
+
+    return null
+
+
+    // switch (propsDasboard.theme) {
+
+    //     case "md-purple":
+    //         return classNames({
+    //             [`bg-md-purple-${opactiy}`]  : option === "bg",
+    //             [`text-md-purple-${opactiy}`]: option === 'text'
+    //         });
+
+    //     case "green":
+    //         return classNames({
+    //             [`bg-green-${opactiy}`]  : option === "bg",
+    //             [`text-green-${opactiy}`]: option === 'text'
+    //         });
+
+    //     case "red":
+    //         return classNames({
+    //             [`bg-red-${opactiy}`]  : option === "bg",
+    //             [`text-red-${opactiy}`]: option === 'text'
+    //         });
+
+    //     default:
+    //         return classNames({
+    //             [`bg-tq-blue-${opactiy}`]   : option === "bg",
+    //             [`text-tq-blue-${opactiy}`] : option === 'text'
+    //         });
+    // }
 
 }

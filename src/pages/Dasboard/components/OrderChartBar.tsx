@@ -118,9 +118,8 @@ export default class OrderChartBar extends React.PureComponent<PropsBar, StateBa
         return (
             <React.Fragment>
                 <Card
-                    darkMode={false}
                     header={this.headerCard}
-                    className="min-h-44 bg-white dark:bg-slate-800">
+                    className="min-h-44 bg-white">
                     <ResponsiveContainer width={"100%"} height={200}>
                         <BarChart
                             data={this.state.data}

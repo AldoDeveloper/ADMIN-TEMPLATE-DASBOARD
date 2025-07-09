@@ -36,7 +36,7 @@ export default {
                 },
                 {
                     'pl-8': context.iconPosition === 'left',
-                    'pr-8': props.iconPosition === 'right'
+                    'pr-8': props?.iconPosition === 'right'
                 }
             ),
         }),

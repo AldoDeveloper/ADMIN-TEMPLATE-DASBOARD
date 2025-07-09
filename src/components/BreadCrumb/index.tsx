@@ -11,13 +11,13 @@ const Breadcrumb: React.FC<PropsBreadCrumbs> = ({ data }) => {
         return icon;
     };
 
-    const FirstRenderer: React.FC<PropsBreadCrumbs["data"][0] & { idx?: number }> = ({ to, icon, idx, name }) => {
+    const FirstRenderer = ({ to, icon, name } : PropsBreadCrumbs["data"][0]) => {
         return (
             <li className={`inline-flex items-center ${icon ? "gap-2" : ""}`}>
                 {
                     icon && (
                         <>
-                            {rendererIcon(icon)}
+                            { rendererIcon(icon) }        
                         </>
                     )
                 }
@@ -28,7 +28,7 @@ const Breadcrumb: React.FC<PropsBreadCrumbs> = ({ data }) => {
             </li>
         )
     }
-
+    
     return (
         <nav className="flex text-gray-600 max-md:hidden" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-1 md:space-x-3">
@@ -39,7 +39,6 @@ const Breadcrumb: React.FC<PropsBreadCrumbs> = ({ data }) => {
                                 <FirstRenderer
                                     to={to}
                                     key={idx}
-                                    // idx={idx}
                                     name={name}
                                     space={space}
                                     icon={icon} />
@@ -64,11 +63,11 @@ const Breadcrumb: React.FC<PropsBreadCrumbs> = ({ data }) => {
                                                 {
                                                     icon && (
                                                         <>
-                                                            {rendererIcon(icon)}
+                                                            { rendererIcon(icon) }
                                                         </>
                                                     )
                                                 }
-                                                {name}
+                                                { name }
                                             </Link>
                                         </>
                                     )

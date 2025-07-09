@@ -3,11 +3,11 @@ import { Area, CartesianGrid, LabelList, Legend, Line, ReferenceDot, ResponsiveC
 import { ComposedChart as RComposedChart } from 'recharts';
 import getDataComposedChart from "./data";
 import { BsCheck, BsDownload } from "react-icons/bs";
-import Card from "@/components/Card";
 import Button from "@/components/Button";
 import { getRandomInt } from "@/utilities/random";
 import html2canvas from 'html2canvas-pro';
 import { StateOptionsComposedChart } from "../interface";
+import { Card } from "primereact/card";
 
 export default class ComposedChart extends React.Component<any, StateOptionsComposedChart<typeof getDataComposedChart[0]> | any> {
 
@@ -33,7 +33,7 @@ export default class ComposedChart extends React.Component<any, StateOptionsComp
 
     public componentDidUpdate(prevProps: Readonly<any>, prevState: Readonly<any>, snapshot?: any): void {
         if (prevState.data !== this.state.data) {
-            if(this.state.data.length >= 100){
+            if (this.state.data.length >= 100) {
                 clearInterval(this.intervalIdData)
             }
         }
@@ -158,13 +158,10 @@ export default class ComposedChart extends React.Component<any, StateOptionsComp
         )
     }
 
-    public render() : React.ReactNode {
+    public render(): React.ReactNode {
         return (
             <React.Fragment>
-                <Card
-                    header={this.renderHeaderChart}
-                    className="w-full min-h-[350px]"
-                    bodyClassName="px-0">
+                <Card className="mt-3 rounded-lg">
                     <ResponsiveContainer width={"100%"} height={350} ref={this.refSvg}>
                         <RComposedChart
                             data={this.state.data}

@@ -21,7 +21,7 @@ const Card: React.FC<PropsComponent> = ({ children, className, header, darkMode,
 
     return (
         <React.Fragment>
-            <div className={`relative animate-fadeInTop w-full shadow-xl bg-white ${isDark ? "dark:bg-slate-800" : ""} rounded-xl ${className}`} {...rest}>
+            <div className={`relative animate-fadeInTop w-full shadow-xl bg-white ${isDark ? "dark:bg-gray-900" : ""} rounded-xl ${className}`} {...rest}>
                 {
                     header && (
                         <div className={`py-0 px-0 ${headerClassName}`}>

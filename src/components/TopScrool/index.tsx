@@ -36,6 +36,7 @@ const TopScrool : React.FC<{}> = ({}) => {
                 exit={"exit"}>
                 <Button 
                     size="sm"
+                    optionTheme="auto"
                     className="px-2 py-2"
                     onClick={topScroolClick}
                     label={<BsArrowUpCircle color="white" size={25}/>}

@@ -6,10 +6,10 @@ import OverlayPanelPrime from "../Overlay/PanelPrime";
 
 const Table: React.FC<PropsTable> = (
     {
-        data, columns,
+        data, 
+        columns,
         className,
         optionsPagination,
-        canPagination,
         canVisibility,
         optionsVisibility
     }): React.ReactNode => {

@@ -1,23 +1,12 @@
 import React from "react";
 import { Await, createBrowserRouter, RouterProvider } from "react-router-dom";
-import Loading from "./components/Loading"
-import Error from "./components/Error";
-import LayoutMain from "./layouts/layout.main";
-import LayoutAuth from "./layouts/layout.auth";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
-import ResetPassword from "./pages/ResetPassword";
-import LayoutDasboard from "./layouts/layout.dasboard";
-import Dasboard from "./pages/Dasboard";
-import Analityc from "./pages/Analityc";
-import Account from "./pages/Account";
-import Product from "./pages/Product";
-import Component from "./pages/Component";
-import DesignThinkingCanvas from "./components/Canvas";
+import PageModal from "./pages/Component/modal";
+import { IndexPage } from "./pages";
+import LoadingV2 from "./components/Loading/loadingv2";
 
 const HandleAsynElement: React.FC<{}> = () => {
     return (
-        <React.Suspense fallback={<Loading />}>
+        <React.Suspense fallback={<LoadingV2/>}>
             <Await resolve={
                 new Promise((resolve, reject) => {
                     setTimeout(() => {
@@ -29,7 +18,57 @@ const HandleAsynElement: React.FC<{}> = () => {
             </Await>
         </React.Suspense>
     )
-}
+};
+
+const LoadingLazy    = React.lazy(() => import("./components/Loading"));
+const ErrorLazy      = React.lazy(() => import("./components/Error"));
+const LayoutMainLazy = React.lazy(() => import("./layouts/layout.main"));
+const LayoutAuthLazy = React.lazy(() => import("./layouts/layout.auth"));
+const LoginLazy            = React.lazy(() => import("./pages/Login"));
+const SignUpLazy           = React.lazy(() => import("./pages/SignUp"));
+const ResetPasswordLazy    = React.lazy(() => import("./pages/ResetPassword"));
+const LayoutDasboardLazy   = React.lazy(() => import("./layouts/layout.dasboard"));
+const DasboardLazy   = React.lazy(() => import("./pages/Dasboard"));
+const AnalitycLazy   = React.lazy(() => import("./pages/Analityc"));
+const AccountLazy    = React.lazy(() => import("./pages/Account"));
+const ProductLazy    = React.lazy(() => import("./pages/Product"));
+const ComponentLazy  = React.lazy(() => import("./pages/Component"));
+const ButtonPageLazy = React.lazy(() => import("./pages/Component/button"));
+const DropdownsPageLazy = React.lazy(() => import("./pages/Component/dropdowns"));
+const ToastPageLazy  = React.lazy(() => import("./pages/Component/toast"));
+const TablePageLazy  = React.lazy(() => import("./pages/Table"));
+const BreadcrumbsPageLazy = React.lazy(() => import("./pages/Breadcrumb"));
+const CardPageLazy   = React.lazy(() => import("./pages/Component/card"));
+const NavbarPageLazy = React.lazy(() => import("./pages/Component/navbar"));
+const TreePageLazy   = React.lazy(() => import("./pages/Component/tree"));
+const InputTextLazy  = React.lazy(() => import('./pages/Component/inputtext'));
+const TimeLineLazy   = React.lazy(() => import('./pages/Component/Timeline'));
+const SteperLazy     = React.lazy(() => import("./pages/Component/steper"));
+
+const Loading        = () => <LoadingLazy />;
+const Error          = () => <ErrorLazy />;
+const LayoutMain     = () => <LayoutMainLazy />;
+const LayoutAuth     = () => <LayoutAuthLazy />;
+const Login          = () => <LoginLazy />;
+const SignUp         = () => <SignUpLazy />;
+const ResetPassword  = () => <ResetPasswordLazy />;
+const LayoutDasboard = () => <LayoutDasboardLazy />;
+const Dasboard       = () => <DasboardLazy />;
+const Analityc       = () => <AnalitycLazy />;
+const Account        = () => <AccountLazy />;
+const Product        = () => <ProductLazy />;
+const Component      = () => <ComponentLazy />;
+const ButtonPage     = () => <ButtonPageLazy />;
+const DropdownsPage  = () => <DropdownsPageLazy />;
+const ToastPage      = () => <ToastPageLazy />;
+const TablePage      = () => <TablePageLazy />;
+const BreadcrumbsPage = () => <BreadcrumbsPageLazy />;
+const CardPage       = () => <CardPageLazy/>;
+const NavbarPage     = () => <NavbarPageLazy/>;
+const TreePage       = () => <TreePageLazy/>;
+const InputTextPage  = () => <InputTextLazy/>;
+const TimeLinePage   = () => <TimeLineLazy/>;
+const SteperPage     = () => <SteperLazy/>;
 
 const router = createBrowserRouter([
     {
@@ -40,7 +79,7 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: (
-                    <DesignThinkingCanvas/>
+                    <IndexPage/>
                 )
             },
             {
@@ -71,19 +110,20 @@ const router = createBrowserRouter([
                     },
                     {
                         path: 'analityc',
-                        element: <Analityc/>
+                        element: <Analityc />,
                     },
                     {
                         path: 'account',
-                        element: <Account/>
+                        element: <Account />
                     },
                     {
                         path: "product",
-                        element: <Product/>
+                        element: <Product />
                     },
                     {
                         path: "component",
-                        element: <Component/>,
+                        element: <Component />,
+                        errorElement: <Error />,
                         children: [
                             {
                                 index: true,
@@ -91,7 +131,51 @@ const router = createBrowserRouter([
                             },
                             {
                                 path: "buttons",
-                                element: <><h1 className="text-center text-2xl font-semibold my-5">Pages Button</h1></>
+                                element: <ButtonPage />
+                            },
+                            {
+                                path: "dropdowns",
+                                element: <DropdownsPage/>
+                            },
+                            {
+                                path: "toast",
+                                element: <ToastPage/>
+                            },
+                            {
+                                path: "table",
+                                element: <TablePage/>
+                            },
+                            {
+                                path: "breadcrumbs",
+                                element: <BreadcrumbsPage/>
+                            },
+                            {
+                                path: "card",
+                                element: <CardPage/>
+                            },
+                            {
+                                path: "navbar",
+                                element: <NavbarPage/>
+                            },
+                            {
+                                path: "modal",
+                                element: <PageModal/>
+                            },
+                            {
+                                path: "tree",
+                                element: <TreePage/>
+                            },
+                            {
+                                path: "inputtext",
+                                element: <InputTextPage/>
+                            },
+                            {
+                                path: "timeline",
+                                element: <TimeLinePage/>
+                            },
+                            {
+                                path: "steper",
+                                element: <SteperPage/>
                             }
                         ]
                     }
@@ -101,4 +185,4 @@ const router = createBrowserRouter([
     }
 ]);
 
-export const Routes = (): React.ReactNode => <RouterProvider router={router} fallbackElement={<Loading />} />
+export const Routes : React.FC<{}> = ()  => <RouterProvider router={router} fallbackElement={<LoadingV2 />} />

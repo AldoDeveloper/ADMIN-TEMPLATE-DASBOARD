@@ -82,7 +82,6 @@ export default function Dasboard(): React.ReactNode {
     return (
         <React.Fragment>
             <div id="content" className="overflow-y-hidden overflow-x-hidden min-h-[100vh] my-2">
-
                 <CardInfo />
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-2 mt-3">
                     {!load && (

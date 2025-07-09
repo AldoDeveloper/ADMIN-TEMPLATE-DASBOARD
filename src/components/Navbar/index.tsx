@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React, { ReactElement } from "react";
 import { NavLink } from "react-router-dom";
-import Dropdown from "@component/Dropdowns"
+import Dropdown from "@/components/Dropdowns/dropdown.custom"
 import { ContextApp } from "@/state/context/app";
 import { useTranslation } from "react-i18next";
 import ModeTheme from "../Theme/ModeThema";

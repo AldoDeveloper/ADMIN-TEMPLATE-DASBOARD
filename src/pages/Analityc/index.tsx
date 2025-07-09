@@ -86,7 +86,11 @@ export default function Analityc(): React.ReactNode {
                 <React.Suspense fallback={<LoadingSkelton />}>
                     <LoadComposedChart />
                 </React.Suspense>
-                <TablePrime data={dataProduct} stripedRows selectionMode={"multiple"} columns={columns} />
+                <TablePrime 
+                    data={dataProduct} 
+                    stripedRows 
+                    selectionMode={"multiple"} 
+                    columns={columns} />
             </div>
         </React.Fragment>
     )

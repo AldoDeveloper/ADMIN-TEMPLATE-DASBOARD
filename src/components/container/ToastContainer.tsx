@@ -1,7 +1,7 @@
 import React from "react";
 import { ToastContainer, cssTransition } from 'react-toastify';
 
-const bounceAnimationToast = cssTransition({
+export const bounceAnimationToast = cssTransition({
     enter: "fade-in-bottom-right-toast",
     exit : "fade-out-bottom-right-toast"
 });

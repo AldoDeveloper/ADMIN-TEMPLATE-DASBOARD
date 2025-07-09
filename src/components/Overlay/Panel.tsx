@@ -73,7 +73,7 @@ const OverlayPanel: React.FC<OverlayPanelProps> = ({ children, isOpen, onChange,
             </div>
             {
                 isOpen && (
-                    <div ref={refOverlay} className={`absolute z-10 w-auto  h-auto mt-2 bg-white dark:bg-slate-600 rounded-lg shadow-lg ${isRight ? "right-0" : "left-0"}`}>
+                    <div ref={refOverlay} className={`absolute z-10 w-auto  h-auto mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg ${isRight ? "right-0" : "left-0"}`}>
                         <div className="relative p-4">
                             <div className={
                                 `absolute ${isRight

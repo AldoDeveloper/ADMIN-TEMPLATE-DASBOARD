@@ -27,7 +27,7 @@ export default {
             className: classNames('flex items-center justify-center shrink-0', 'bg-transparent text-gray-500 w-8 rounded-tr-lg rounded-br-lg')
         },
         wrapper: {
-            className: classNames('max-h-[200px] overflow-auto', 'bg-white text-gray-700 border-0 rounded-md shadow-lg', 'dark:bg-slate-800 dark:text-white/80')
+            className: classNames('max-h-[400px] overflow-auto', 'bg-white text-gray-700 border-0 rounded-md shadow-lg', 'dark:bg-slate-800 dark:text-white/80')
         },
         list: 'py-2 list-none m-0',
         item: ({ context } : any) => ({

@@ -47,6 +47,150 @@ export const revenueData: Array<PropsRevenueData> = [
     },
 ];
 
+export const dataSampleRevenue = [
+  {
+    "id": 1,
+    "date": "2025-07-01",
+    "customer": "Aldo Mart",
+    "amount": 1250000,
+    "status": "paid"
+  },
+  {
+    "id": 2,
+    "date": "2025-07-01",
+    "customer": "TechnoStore",
+    "amount": 1875000,
+    "status": "paid"
+  },
+  {
+    "id": 3,
+    "date": "2025-07-02",
+    "customer": "Future Corp",
+    "amount": 920000,
+    "status": "pending"
+  },
+  {
+    "id": 4,
+    "date": "2025-07-02",
+    "customer": "Karya Sentosa",
+    "amount": 1460000,
+    "status": "failed"
+  },
+  {
+    "id": 5,
+    "date": "2025-07-03",
+    "customer": "Toko Sinar",
+    "amount": 575000,
+    "status": "paid"
+  },
+  {
+    "id": 6,
+    "date": "2025-07-03",
+    "customer": "Makmur Abadi",
+    "amount": 830000,
+    "status": "paid"
+  },
+  {
+    "id": 7,
+    "date": "2025-07-03",
+    "customer": "PT. Jaya Digital",
+    "amount": 1750000,
+    "status": "pending"
+  },
+  {
+    "id": 8,
+    "date": "2025-07-04",
+    "customer": "IndoTix",
+    "amount": 2330000,
+    "status": "paid"
+  },
+  {
+    "id": 9,
+    "date": "2025-07-04",
+    "customer": "Garuda Teknologi",
+    "amount": 1950000,
+    "status": "paid"
+  },
+  {
+    "id": 10,
+    "date": "2025-07-04",
+    "customer": "Media Nusantara",
+    "amount": 1130000,
+    "status": "failed"
+  },
+  {
+    "id": 11,
+    "date": "2025-07-05",
+    "customer": "Rama Elektronik",
+    "amount": 980000,
+    "status": "paid"
+  },
+  {
+    "id": 12,
+    "date": "2025-07-05",
+    "customer": "Tirta Gemilang",
+    "amount": 1285000,
+    "status": "pending"
+  },
+  {
+    "id": 13,
+    "date": "2025-07-06",
+    "customer": "PT. Mega Karya",
+    "amount": 2140000,
+    "status": "paid"
+  },
+  {
+    "id": 14,
+    "date": "2025-07-06",
+    "customer": "SmartOne",
+    "amount": 1500000,
+    "status": "paid"
+  },
+  {
+    "id": 15,
+    "date": "2025-07-06",
+    "customer": "Global Mart",
+    "amount": 1650000,
+    "status": "pending"
+  },
+  {
+    "id": 16,
+    "date": "2025-07-07",
+    "customer": "Delta Vision",
+    "amount": 1390000,
+    "status": "failed"
+  },
+  {
+    "id": 17,
+    "date": "2025-07-07",
+    "customer": "Topindo Network",
+    "amount": 1790000,
+    "status": "paid"
+  },
+  {
+    "id": 18,
+    "date": "2025-07-08",
+    "customer": "PT. Andalan",
+    "amount": 890000,
+    "status": "paid"
+  },
+  {
+    "id": 19,
+    "date": "2025-07-08",
+    "customer": "CyberXpress",
+    "amount": 1530000,
+    "status": "pending"
+  },
+  {
+    "id": 20,
+    "date": "2025-07-08",
+    "customer": "Satria Komputer",
+    "amount": 1270000,
+    "status": "paid"
+  }
+]
+
+
 export const barValueChart : Array<PropsBarData> = Array.from<PropsBarData>({length : 10}).map((v, k) => {
     return{
         name: "Product",
@@ -93,6 +237,17 @@ export const ThemeStrokeColor : any= {
     "red-800": "#991b1b",
     "red-900": "#7f1d1d",
     "red-950": "#450a0a",
+
+    "yellow-100" : "#fbffe7",
+    "yellow-200" : "#f4ffc1",
+    "yellow-300" : "#ecff41",
+    "yellow-400" : "#f2ff0d",
+    "yellow-500" : "#ffff00",
+    "yellow-600" : "#d1bf00",
+    "yellow-700" : "#a68b02",
+    "yellow-800" : "#896c0a",
+    "yellow-900" : "#74580f",
+    "yellow-950" : "#443004",
 
     "grenn-50": "#f0fdf5",
     "green-100": "#dcfce8",

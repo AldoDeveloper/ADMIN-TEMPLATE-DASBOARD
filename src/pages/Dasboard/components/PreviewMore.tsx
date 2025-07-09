@@ -302,8 +302,7 @@ export default class PreviewMore extends React.Component {
                         <Card
                             header={this.headerNotification}
                             bodyClassName="py-3 px-6"
-
-                            className="bg-white h-auto dark:bg-slate-800">
+                            className="bg-white h-auto">
                             <ul className="divide-y divide-slate-200 list-none">
                                 {
                                     NotificationData.map((val, idx) => (
@@ -320,7 +319,7 @@ export default class PreviewMore extends React.Component {
                         <Card
                             header={this.headerUpcomingPayment}
                             bodyClassName="px-3"
-                            className="bg-white my-3 min-h-[17rem] dark:bg-slate-800">
+                            className="bg-white my-3 min-h-[17rem]">
                             <ul className="list-none divide-y py-2 m-0">
                                 {
                                     uncomingPaymentData.map((val, idx) => (
@@ -334,7 +333,7 @@ export default class PreviewMore extends React.Component {
                         <Card
                             header={this.currentBalance}
                             bodyClassName="px-3"
-                            className="bg-white dark:bg-slate-800 min-h-[7rem] col-span-1">
+                            className="bg-white min-h-[7rem] col-span-1">
                             <div className="flex gap-2 items-center">
                                 <h1 className="text-2xl">$81,000,00</h1>
                                 <BsEye />
@@ -368,7 +367,7 @@ export default class PreviewMore extends React.Component {
                             </div>
                         </Card>
                         <div className="grid grid-cols-2 gap-2 mt-2">
-                            <Card bodyClassName="flex justify-center h-full items-center" className="bg-white dark:bg-slate-800 h-[10rem]">
+                            <Card bodyClassName="flex justify-center h-full items-center" className="bg-white h-[10rem]">
                                 <div className="w-[5rem] h-[5rem]">
                                     <CircularProgress
                                         value={80}
@@ -379,7 +378,7 @@ export default class PreviewMore extends React.Component {
                                     <p className="text-sm mt-1 text-center font-semibold text-slate-400 dark:text-slate-50">Task</p>
                                 </div>
                             </Card>
-                            <Card bodyClassName="flex justify-center h-full items-center" className="bg-white dark:bg-slate-800 h-[10rem]">
+                            <Card bodyClassName="flex justify-center h-full items-center" className="bg-white h-[10rem]">
                                 <div className="w-[5rem] h-[5rem]">
                                     <CircularProgress
                                         value={50}
@@ -390,7 +389,7 @@ export default class PreviewMore extends React.Component {
                                     <p className="text-sm mt-1 text-center font-semibold text-slate-400 dark:text-slate-50">Task</p>
                                 </div>
                             </Card>
-                            <Card bodyClassName="flex justify-center h-full items-center" className="bg-white dark:bg-slate-800 h-[10rem]">
+                            <Card bodyClassName="flex justify-center h-full items-center" className="bg-white h-[10rem]">
                                 <div className="w-[5rem] h-[5rem]">
                                     <CircularProgress
                                         value={35}
@@ -401,7 +400,7 @@ export default class PreviewMore extends React.Component {
                                     <p className="text-sm mt-1 text-center font-semibold text-slate-400 dark:text-slate-50">Activity</p>
                                 </div>
                             </Card>
-                            <Card bodyClassName="flex justify-center h-full items-center" className="bg-white dark:bg-slate-800 h-[10rem]">
+                            <Card bodyClassName="flex justify-center h-full items-center" className="bg-white h-[10rem]">
                                 <div className="w-[5rem] h-[5rem] text-center">
                                     <CircularProgress
                                         value={86}
@@ -416,7 +415,7 @@ export default class PreviewMore extends React.Component {
                         <Card
                             header={this.AchievmentHeader}
                             bodyClassName="py-3 px-6"
-                            className="bg-white my-2 min-h-[12rem] dark:bg-slate-800">
+                            className="bg-white my-2 min-h-[12rem]">
                             <div className="grid grid-cols-2 gap-2">
                                 <Card
                                     darkMode={false}

@@ -25,13 +25,21 @@ import {
     BsSegmentedNav,
     BsUnion,
     BsFillTreeFill,
+    BsPencil,
+    BsPersonAdd,
+    BsSignDoNotEnter,
+    BsSignMergeLeft,
+    BsRulers,
+    BsStack
+    
  } from "react-icons/bs";
+ 
 
 export const dataSidebar = (theme: any) : Array<TreeNodeProps> => [
     {
         id: 1,
         name: "Dasboard",
-        to: "/dasboard/",
+        to: "/dasboard",
         icon: <BsSpeedometer2 size={16} fill={theme}/>,
         className: "",
     },
@@ -40,12 +48,12 @@ export const dataSidebar = (theme: any) : Array<TreeNodeProps> => [
         name: "Analityc",
         to: "/dasboard/analityc",
         icon: <BsGraphUp size={16} fill={theme}/>,
-        className: "",
+        className: ""
     },
     {
         id: 17,
         name: "Component",
-        to: "/dasboard/component",
+        to: "#",
         icon: <BsLayoutWtf size={16} fill={theme}/>,
         className: "",
         children: [
@@ -69,7 +77,7 @@ export const dataSidebar = (theme: any) : Array<TreeNodeProps> => [
             },
             {
                 id: "3",
-                to: "/dasboard/component/toast",
+                to: "/dasboard/component/table",
                 icon: <BsGrid3X3 size={15} color={theme}/>,
                 name: "Table"
             },
@@ -81,19 +89,19 @@ export const dataSidebar = (theme: any) : Array<TreeNodeProps> => [
             },
             {
                 id: "u1824",
-                to: "/dasboard/component/cards",
+                to: "/dasboard/component/card",
                 icon: <BsCardText size={15} color={theme}/>,
                 name: "Card"
             },
             {
                 id: "1as",
-                to: "/dasboard/component/cards",
+                to: "/dasboard/component/navbar",
                 icon: <BsSegmentedNav size={15} color={theme}/>,
                 name: "Navbar"
             },
             {
                 id: "5",
-                to: "/dasboard/component/modals",
+                to: "/dasboard/component/modal",
                 icon: <BsUnion size={15} color={theme}/>,
                 name: "Modal"
             },
@@ -105,27 +113,21 @@ export const dataSidebar = (theme: any) : Array<TreeNodeProps> => [
             },
             {
                 id: "12js",
+                to: "/dasboard/component/inputtext",
+                icon: <BsPencil size={15} color={theme}/>,
                 name: "Input Text"
             },
             {
-                id: "12js",
-                name: "Input Select"
+                id: "92jsx",
+                to: "/dasboard/component/timeline",
+                icon: <BsPencil size={15} color={theme}/>,
+                name: "Timeline"
             },
-            {
-                id: "6",
-                name: "Sidebar"
-            },
-            {
-                id: 7,
-                name: "Chart"
-            },
-            {
-                id: 8,
-                name: "Calender"
-            },
-            {
-                id: 9,
-                name: "Skelton"
+              {
+                id: "2u591b",
+                to: "/dasboard/component/steper",
+                icon: <BsStack size={15} color={theme}/>,
+                name: "Steper"
             }
         ]
     },
@@ -143,10 +145,35 @@ export const dataSidebar = (theme: any) : Array<TreeNodeProps> => [
         icon: <BsBoxSeam size={16} fill={theme}/>,
         className: "",
     },
+     {
+        id: 1020,
+        name: "Auth",
+        to: "#",
+        icon: <BsPersonAdd size={16} fill={theme}/>,
+        children: [
+            {
+                id: 1021,
+                name: "Login",
+                to: "/auth/sign-in",
+                icon: <BsSignDoNotEnter size={16} fill={theme}/>
+            },
+            {
+                id: 2,
+                name: "Register",
+                to: "/auth/sign-up",
+                icon: <BsSignMergeLeft size={16} fill={theme}/>
+            },
+            {
+                id: 3,
+                name: "Reset Password",
+                to: "/auth/reset-password",
+                icon: <BsRulers size={16} fill={theme}/>
+            }
+        ]
+    },
     {
         id: 5,
         name: "Orders",
-        to: "/ansfas/sfsdf",
         icon: <BsReceipt size={16} fill={theme}/>,
         className: ""
     },

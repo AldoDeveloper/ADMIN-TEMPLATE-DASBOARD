@@ -36,13 +36,13 @@ import {
  
 
 export const dataSidebar = (theme: any) : Array<TreeNodeProps> => [
-    {
-        id: 1,
-        name: "Dasboard",
-        to: "/dasboard",
-        icon: <BsSpeedometer2 size={16} fill={theme}/>,
-        className: "",
-    },
+    // {
+    //     id: 1,
+    //     name: "Dasboard",
+    //     to: "/dasboard",
+    //     icon: <BsSpeedometer2 size={16} fill={theme}/>,
+    //     className: "",
+    // },
     {
         id: 2,
         name: "Analityc",
@@ -141,7 +141,6 @@ export const dataSidebar = (theme: any) : Array<TreeNodeProps> => [
     {
         id: 4,
         name: "Product",
-        to: "/dasboard/product",
         icon: <BsBoxSeam size={16} fill={theme}/>,
         className: "",
     },

@@ -10,7 +10,6 @@ import { Ripple } from "primereact/ripple";
 import { Row } from "primereact/row";
 import React, { useRef, useState } from "react";
 import { BsChevronDown, BsColumns, BsColumnsGap, BsFileExcelFill, BsFilePdfFill, BsTable, BsTrashFill } from "react-icons/bs";
-
 import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { FaSearch } from "react-icons/fa";
@@ -42,7 +41,7 @@ const category = [
         id: 4,
         label: "Gaming"
     }
-]
+];
 
 const TabelDasboard: React.FC<PropsTableDasboard> = ({ data }) => {
 
@@ -115,7 +114,6 @@ const TabelDasboard: React.FC<PropsTableDasboard> = ({ data }) => {
         PageLinks(options) {
             if ((options.view.startPage === options.page && options.view.startPage !== 0) || (options.view.endPage === options.page && options.page + 1 !== options.totalPages)) {
                 const className = classNames(options.className, { 'disable:opacity-50': true });
-
                 return (
                     <span className={`${className} ml-6`} style={{ userSelect: 'none' }}>
                         ...
@@ -126,7 +124,7 @@ const TabelDasboard: React.FC<PropsTableDasboard> = ({ data }) => {
             return (
                 <button
                     type="button"
-                    className={`${options.className} ${options.page === options.currentPage ? "bg-gray-300 shadow-md dark:bg-gray-600 dark:ring-1 dark:ring-blue-500" : ""} w-8 h-8 rounded-full ml-6 bg-gray-100 dark:bg-gray-800 dark:text-white`}
+                    className={`${options.className} ${options.page === options.currentPage ? "bg-gray-300 shadow-md dark:bg-gray-600 dark:ring-1 dark:ring-blue-500" : ""} w-8 h-8 rounded-lg ml-6 bg-gray-100 dark:bg-gray-800 dark:text-white`}
                     onClick={options.onClick}>
                     {options.page + 1}
                     <Ripple />
@@ -147,7 +145,7 @@ const TabelDasboard: React.FC<PropsTableDasboard> = ({ data }) => {
                 <Dropdown
                     options={dropdownOptions}
                     value={options.value}
-                    style={{ width: 100 }}
+                    style={{ width: 100, height: 40, display: "flex", justifyContent: "center", alignItems: "center" }}
                     size={5}
                     onChange={options.onChange} />
             )
@@ -244,30 +242,32 @@ const TabelDasboard: React.FC<PropsTableDasboard> = ({ data }) => {
                         className="py-3"
                         outlined
                         icon={() => <BsFilePdfFill size={18} />} />
-                    
+
                     <PButton
                         severity="warning"
-                        icon={() => <BsTable size={18}/>}
+                        icon={() => <BsTable size={18} />}
                     />
                 </div>
 
                 <div className="flex flex-wrap items-center space-x-4 max-md:justify-start max-md:space-y-3">
-                    <IconField iconPosition="left" className="w-[17rem] max-md:w-full">
-                        <InputIcon>
-                            <FaSearch size={16} />
-                        </InputIcon>
-                        <InputText
-                            placeholder="Search"
-                            onChange={(ev) => setFilterGLobal({
-                                filters: {
-                                    global: {
-                                        value: ev.target.value as any,
-                                        matchMode: FilterMatchMode.CONTAINS
+                    <div id="search">
+                        <IconField iconPosition="left" className="w-[17rem] max-md:w-full">
+                            <InputIcon>
+                                <FaSearch size={16} />
+                            </InputIcon>
+                            <InputText
+                                placeholder="Search"
+                                onChange={(ev) => setFilterGLobal({
+                                    filters: {
+                                        global: {
+                                            value: ev.target.value as any,
+                                            matchMode: FilterMatchMode.CONTAINS
+                                        }
                                     }
-                                }
-                            })}
-                            className="py-3 w-full focus:shadow-none hover:border-purple-500" />
-                    </IconField>
+                                })}
+                                className="py-3 w-full focus:shadow-none hover:border-purple-500" />
+                        </IconField>
+                    </div>
 
                     <Dropdown
                         options={category}
@@ -279,6 +279,7 @@ const TabelDasboard: React.FC<PropsTableDasboard> = ({ data }) => {
                         itemTemplate={itemDropdownFilterCategory}
                         valueTemplate={valueDropdownFilterCategory}
                         onChange={(val) => onSelectedCategory(val.value)}
+                        style={{ padding: 0, margin: 0 }}
                         className="w-full md:w-[12rem] border-slate-300 dark:text-white hover:border-purple-500"
                         placeholder="Select Category" />
 

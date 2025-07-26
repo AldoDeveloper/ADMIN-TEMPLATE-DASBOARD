@@ -6,6 +6,7 @@ import { SidebarList } from "@/components/Sidebar";
 import { dataSidebar } from "@/data/sidebar";
 import { Sidebar } from "@/components/Overlay";
 import useIsMobile from "@/hooks/useMobile";
+import { Link, useNavigate } from "react-router-dom";
 
 interface PropsLayoutSidebar {
     isMobileSide?: boolean;
@@ -36,16 +37,22 @@ export default function LayoutSidebar({ isMobileSide, onHiddeMobileSide }: Props
 
     const findHexColor = ThemeStrokeColor[bgClassName.substring(3)];
 
+    const navigate = useNavigate();
+
     return (
         <React.Fragment>
+            {/* <Menu 
+                model={menuItemSidebar(theme as string)} 
+                className={`fixed inset-0 overflow-y-scroll top-3 left-3 shadow-xl rounded-lg bg-white dark:bg-gray-900 text-white transition-all duration-500 transform ${classSidebar} lg:translate-x-0 h-[96vh] disabled-scrool`}/> */}
             <aside className={`fixed inset-0 overflow-y-scroll top-3 left-3 shadow-xl rounded-lg bg-white dark:bg-gray-900 text-white transition-all duration-500 transform ${classSidebar} lg:translate-x-0 h-[96vh] disabled-scrool`}>
-                <div className="flex justify-start gap-3 items-center pl-8 border-b py-5">
-                    <picture>
-                        <source srcSet={bgImage} type="image/png" />
-                        <img src={bgImage} className="w-[20px]" alt="" />
-                    </picture>
-                    <h1 className="text-xl text-slate-600 dark:text-slate-100 font-semibold uppercase">Admin</h1>
-                </div>
+                <Link to={"/dasboard"}>
+                    <div className="flex justify-start gap-3 items-center pl-8 border-b py-5">
+                        <picture>
+                            <source srcSet={bgImage} type="image/png" />
+                            <img src={bgImage} className="w-[20px]" alt="" />
+                        </picture>
+                        <h1 className="text-xl text-slate-600 dark:text-slate-100 font-semibold uppercase">Admin</h1>
+                    </div></Link>
                 <nav className="px-5 py-4">
                     <SidebarList
                         space="5"

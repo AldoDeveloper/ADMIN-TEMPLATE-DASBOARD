@@ -8,6 +8,7 @@ import { IconField } from 'primereact/iconfield';
 import { InputText } from "primereact/inputtext";
 import { InputIcon } from "primereact/inputicon";
 import { Card } from "primereact/card";
+import paginatorTemplate from "@/components/Pagination/pagination.template";
 
 export default class TablePrime extends React.Component<IPropsTabelPrime, IStateTabelPrime> {
 
@@ -114,6 +115,7 @@ export default class TablePrime extends React.Component<IPropsTabelPrime, IState
                         header={this.headerTable}
                         paginatorDropdownAppendTo={"self"}
                         rowsPerPageOptions={[5, 10, 20]}
+                        paginatorTemplate={paginatorTemplate}
                         showGridlines={this.props.showGridlines}
                         stripedRows={this.props.stripedRows}>
                         {

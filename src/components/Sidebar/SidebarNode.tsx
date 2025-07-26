@@ -3,7 +3,7 @@ import { getRandomInt } from "@/utilities/random";
 import React from "react";
 import { BsCaretDownFill, BsCaretLeftFill, BsCaretRightFill, BsFile } from 'react-icons/bs';
 import { motion } from 'framer-motion';
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { ContextDasboard } from "@/state/context/dasboard";
 import classNames from "classnames";
 import { ThemeStrokeColor } from "@/data/dasboard";
@@ -136,70 +136,67 @@ export default class SidebarNode extends React.Component<TreeNodeProps, StateSid
 
     private Link() {
 
-        const { getApp }  = this.context;
-        const hasChildren = (this.props?.children && this.props?.children?.length > 0) ?? false;
+        const { getApp } = this.context;
+        const hasChildren = !!this.props.children?.length;
         const isDark = getApp.darkMode === "dark";
         const { propsDasboard } = React.useContext(ContextDasboard);
 
+        const { pathname } = useLocation();
+
         const themeClass = classNames({
-            "text-red-500"       : propsDasboard.theme === "red",
-            "text-green-500"     : propsDasboard.theme === "green",
-            "text-tq-blue-500"   : propsDasboard.theme === "tq-blue",
-            "text-md-purple-500" : propsDasboard.theme === "md-purple"
+            "text-red-500": propsDasboard.theme === "red",
+            "text-green-500": propsDasboard.theme === "green",
+            "text-tq-blue-500": propsDasboard.theme === "tq-blue",
+            "text-md-purple-500": propsDasboard.theme === "md-purple"
         });
 
         const color = ThemeStrokeColor[themeClass.substring(5)];
 
-        return <NavLink
-            type="button"
-            to={this.props.to ? this.props.to as string : "/"}
-            end
-            style={({ isActive }) => ({ color: isActive && this.props.to != "#" ? color : "" })}
-            className={({ isActive, isPending }) =>
-                `w-full inline-flex dark:hover:text-${propsDasboard.theme}-500 items-center 
-                            ${isActive && this.props.to != "#"
-                    ? `font-semibold`
-                    : "text-slate-800 dark:text-slate-200"}`
-            }
+        const isActiveChild = hasChildren ? this.props.children.some((c) => pathname.includes(c.to as any)) : false;
+        const isActiveSelf = this.props.to && pathname.startsWith(this.props.to);
 
-            onClick={hasChildren && this.handleToogleIsOpen as any}>
-            {
-                ({ isActive }) => (
-                    <React.Fragment>
-                        <div className="flex items-center">
-                            <this.renderIcon className="mr-3" />
-                            <div className="tracking-wide inline-block text-sm">{this.props.name}</div>
-                        </div>
-                        {
-                            hasChildren && (
-                                <div className="inline-block absolute top-0 -right-3">
-                                    { 
-                                        !this.state.isOpenChildren 
-                                            ? <BsCaretRightFill 
-                                                size={17} 
-                                                className={isDark ? "fill-gray-200" : "fill-gray-500"} /> 
-                                            : <BsCaretDownFill 
-                                                size={17} 
-                                                color={isDark ? "white" : "gray"} />}
-                                </div>
-                            )
-                        }
-                        {
-                            isActive && !hasChildren && (
-                                <div className="inline-flex transition-all duration-200 absolute top-0 -right-[1.6rem]">
-                                    <BsCaretLeftFill size={17} />
-                                </div>
-                            )
-                        }
-                    </React.Fragment>
-                )
+        return <Link
+            type="button"
+            to={`${this.props.to ? this.props.to : "#"}`}
+            style={{ color: isActiveSelf ? color : "" }}
+            className={
+                `w-full inline-flex dark:hover:text-${propsDasboard.theme}-500 items-center text-gray-700`
             }
-        </NavLink>
+            onClick={hasChildren && this.handleToogleIsOpen as any}>
+            <React.Fragment>
+                <div className="flex items-center">
+                    <this.renderIcon className="mr-3" />
+                    <div className="tracking-wide inline-block text-sm dark:text-gray-100">{this.props.name}</div>
+                </div>
+                {
+                    hasChildren && (
+                        <div className="inline-block absolute top-0 -right-3">
+                            {
+                                !this.state.isOpenChildren
+                                    ? <BsCaretRightFill
+                                        size={17}
+                                        className={isDark ? "fill-gray-200" : "fill-gray-500"} />
+                                    : <BsCaretDownFill
+                                        size={17}
+                                        color={isDark ? "white" : "gray"} />
+                            }
+                        </div>
+                    )
+                }
+                {
+                    isActiveChild || isActiveSelf && (
+                        <div className="inline-flex transition-all duration-200 absolute top-0 -right-[1.6rem]">
+                            <BsCaretLeftFill size={17} />
+                        </div>
+                    )
+                }
+            </React.Fragment>
+        </Link>
     }
 
     public render(): React.ReactNode {
 
-        const hasChildren = (this.props?.children && this.props?.children?.length > 0) ?? false;
+        const hasChildren = !!this.props.children;
         const isOpenChildren = this.state.isOpenChildren;
 
         return (

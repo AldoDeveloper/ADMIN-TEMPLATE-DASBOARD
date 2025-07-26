@@ -250,7 +250,7 @@ const TabelDasboard: React.FC<PropsTableDasboard> = ({ data }) => {
                 </div>
 
                 <div className="flex flex-wrap items-center space-x-4 max-md:justify-start max-md:space-y-3">
-                    <div id="search">
+                    <div id="search" className="mr-2">
                         <IconField iconPosition="left" className="w-[17rem] max-md:w-full">
                             <InputIcon>
                                 <FaSearch size={16} />

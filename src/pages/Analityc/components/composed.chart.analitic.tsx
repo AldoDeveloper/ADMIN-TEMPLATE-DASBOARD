@@ -9,7 +9,11 @@ import html2canvas from 'html2canvas-pro';
 import { StateOptionsComposedChart } from "../interface";
 import { Card } from "primereact/card";
 
-export default class ComposedChart extends React.Component<any, StateOptionsComposedChart<typeof getDataComposedChart[0]> | any> {
+interface Props{
+    isMobile?: boolean;
+}
+
+export default class ComposedChart extends React.Component<Props, StateOptionsComposedChart<typeof getDataComposedChart[0]> | any> {
 
     private intervalIdData: any;
     private refSvg: any;
@@ -57,7 +61,7 @@ export default class ComposedChart extends React.Component<any, StateOptionsComp
                             additional: { valueAdd: getRandomInt(10000, 100000) },
                             date: new Date().toLocaleTimeString(),
                         }
-                    ].slice(-100)
+                    ].slice(this.props.isMobile ? -20 : -100)
                 }
             })
         }, 2000);
@@ -162,7 +166,7 @@ export default class ComposedChart extends React.Component<any, StateOptionsComp
         return (
             <React.Fragment>
                 <Card className="mt-3 rounded-lg">
-                    <ResponsiveContainer width={"100%"} height={350} ref={this.refSvg}>
+                    <ResponsiveContainer width={"100%"} height={this.props.isMobile ? 225 : 350} ref={this.refSvg}>
                         <RComposedChart
                             data={this.state.data}
                             margin={{ top: 10, right: 0, left: 0, bottom: 5 }}>

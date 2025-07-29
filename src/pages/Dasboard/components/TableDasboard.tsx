@@ -226,7 +226,7 @@ const TabelDasboard: React.FC<PropsTableDasboard> = ({ data }) => {
         }
 
         return (
-            <div className="flex justify-between flex-wrap items-center px-6 pt-5">
+            <div className="flex justify-between flex-wrap max-md:justify-center items-center px-6 pt-5">
                 <div className="flex items-center max-md:mb-3 space-x-4">
                     <PButton
                         severity="success"
@@ -249,8 +249,8 @@ const TabelDasboard: React.FC<PropsTableDasboard> = ({ data }) => {
                     />
                 </div>
 
-                <div className="flex flex-wrap items-center space-x-4 max-md:justify-start max-md:space-y-3">
-                    <div id="search" className="mr-2">
+                <div className="flex max-md:flex-wrap items-center gap-3 max-md:justify-start">
+                    <div id="search" className="w-full">
                         <IconField iconPosition="left" className="w-[17rem] max-md:w-full">
                             <InputIcon>
                                 <FaSearch size={16} />
@@ -286,7 +286,7 @@ const TabelDasboard: React.FC<PropsTableDasboard> = ({ data }) => {
                     <button
                         type="button"
                         onClick={(e) => columRef.current?.toggle(e)}
-                        className="flex justify-between focus:border-purple-500 space-x-3 text-slate-500 dark:text-white items-center min-w-[10rem] rounded-md border border-slate-300 px-4 py-3">
+                        className="flex justify-between focus:border-purple-500 space-x-3 text-slate-500 dark:text-white items-center min-w-[10rem] max-md:w-full rounded-md border border-slate-300 dark:border-slate-700 px-4 py-3">
                         <div className="flex space-x-2 items-center">
                             <span><BsColumns className="fill-purple-500" /></span>
                             <span>Columns</span>
@@ -295,7 +295,7 @@ const TabelDasboard: React.FC<PropsTableDasboard> = ({ data }) => {
                             <BsChevronDown />
                         </span>
                     </button>
-                    <OverlayPanel ref={columRef} showCloseIcon className="min-w-[10rem] border border-slate-500">
+                    <OverlayPanel ref={columRef} showCloseIcon className="min-w-[10rem] max-md:w-[15rem] border border-slate-500">
                         <div className="divide-y" aria-label="list">
                             {
                                 columnVisible.slice(0, columnVisible.length - 1).map((data, idx) => itemTemplate(data, idx))

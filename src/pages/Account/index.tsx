@@ -1,18 +1,24 @@
+import useThemaSystem from "@/hooks/useThema";
+import { ContextApp } from "@/state/context/app";
 import { Button } from "primereact/button";
 import { Card } from "primereact/card";
 import { Dropdown, DropdownFilterOptions } from "primereact/dropdown";
 import { InputText } from "primereact/inputtext";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Avatar from "react-avatar";
 import { BsX } from "react-icons/bs";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css'
+import { InputMask } from "primereact/inputmask";
 
 const PageAccount: React.FC = () => {
 
     const [conuntries, setCountries] = useState<Array<any>>([]);
     const [selectCountry, setSelectCountry] = useState(null);
     const [phone, setPhone] = useState("62");
+
+    const { getApp } = useContext(ContextApp);
+    const isDark = getApp.darkMode === "dark";
 
     useEffect(() => {
         fetch("https://restcountries.com/v3.1/all?fields=name,flags")
@@ -85,7 +91,7 @@ const PageAccount: React.FC = () => {
                                     </div>
                                     <div>
                                         <div className="flex items-center space-x-3">
-                                            <label className="bg-white ring-1 text-sm ring-purple-500  text-gray-500 hover:text-white px-3 py-2 rounded-full cursor-pointer hover:bg-purple-500">
+                                            <label className="bg-white dark:bg-gray-800 dark:text-white ring-1 text-sm ring-purple-500  text-gray-500 hover:text-white px-3 py-2 rounded-full cursor-pointer hover:bg-purple-500">
                                                 Upload Image
                                                 <input
                                                     type="file"
@@ -93,14 +99,14 @@ const PageAccount: React.FC = () => {
                                                     className="hidden"
                                                 />
                                             </label>
-                                            <span className="text-sm text-gray-500">No File Choose</span>
+                                            <span className="text-sm text-gray-500 dark:text-gray-100">No File Choose</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="flex items-center w-full">
-                            <div className="flex-initial w-60 font-semibold text-gray-500">
+                            <div className="flex-initial w-60 font-semibold text-gray-500 dark:text-gray-100">
                                 <span>Full Name</span>
                             </div>
                             <div className="flex-initial w-full">
@@ -108,7 +114,7 @@ const PageAccount: React.FC = () => {
                             </div>
                         </div>
                         <div className="flex items-center w-full">
-                            <div className="flex-initial w-60 font-semibold text-gray-500">
+                            <div className="flex-initial w-60 font-semibold text-gray-500 dark:text-gray-100">
                                 <span>Email</span>
                             </div>
                             <div className="flex-initial w-full">
@@ -117,19 +123,18 @@ const PageAccount: React.FC = () => {
                         </div>
 
                         <div className="flex items-center w-full">
-                            <div className="flex-initial w-60 font-semibold text-gray-500">
+                            <div className="flex-initial w-60 font-semibold text-gray-500 dark:text-gray-100">
                                 <span>Phone Number</span>
                             </div>
-                            <PhoneInput
-                                containerClass="w-full"
-                                onChange={(val) => setPhone(val)}
-                                value={phone}
-                                inputStyle={{ paddingLeft: 50, paddingBottom: 25, borderRadius: "7px", paddingTop: 25, width: "100%" }} 
-                                country={"ID"} />
+                            <InputMask 
+                                id="phone" 
+                                mask="(999) 999-9999" 
+                                className="w-full py-3"
+                                placeholder="Contoh: 0812-3456-7890"></InputMask>
                         </div>
-                         <div className="flex items-center w-full">
-                            <div className="flex-initial w-60 font-semibold text-gray-500">
-                                 <span>Date Of Birth</span>
+                        <div className="flex items-center w-full">
+                            <div className="flex-initial w-60 font-semibold text-gray-500 dark:text-gray-100">
+                                <span>Date Of Birth</span>
                             </div>
                             <div className="flex-initial w-full">
                                 <InputText placeholder="Phone Number" className="w-full py-3" />
@@ -137,7 +142,7 @@ const PageAccount: React.FC = () => {
                         </div>
 
                         <div className="flex items-center w-full">
-                            <div className="flex-initial w-60 font-semibold text-gray-500">
+                            <div className="flex-initial w-60 font-semibold text-gray-500 dark:text-gray-100">
                                 <span>Country</span>
                             </div>
                             <Dropdown

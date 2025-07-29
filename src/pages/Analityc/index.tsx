@@ -7,6 +7,7 @@ import { ColumnProps } from "primereact/column";
 import { loadComponent } from "@/utilities/load";
 import Button from "@/components/Button";
 import { BsClipboard2Fill, BsTrashFill } from "react-icons/bs";
+import useIsMobile from "@/hooks/useMobile";
 
 const LoadComposedChart = React.lazy(async () => await loadComponent(import("./components/composed.chart.analitic")) as any);
 
@@ -27,6 +28,8 @@ export default function Analityc(): React.ReactNode {
     const handleEditData = (data: any) => {
         console.log(data)
     };
+
+    const isMobile = useIsMobile();
 
     const renderBodyTableAction = (product: any) => {
         return (
@@ -84,7 +87,7 @@ export default function Analityc(): React.ReactNode {
             <div className="grid grid-cols-1 grid-flow-row mt-3">
                 <h1 className="text-2xl font-semibold mb-2 mt-2">Analitic</h1>
                 <React.Suspense fallback={<LoadingSkelton />}>
-                    <LoadComposedChart />
+                    <LoadComposedChart isMobile={isMobile}/>
                 </React.Suspense>
                 <TablePrime 
                     data={dataProduct} 

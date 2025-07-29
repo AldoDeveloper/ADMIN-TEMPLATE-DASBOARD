@@ -364,6 +364,8 @@ const ButtonPage: React.FC<{}> = () => {
                                          dark:border-2 focus:outline-2
                                          dark:border-green-500
                                          focus:outline-green-300
+                                         hover:bg-green-200
+                                         hover:text-whit
                                          ring-green-600/50 border-green-500"
                                         icon={() =>
                                             <BsPersonAdd
@@ -375,6 +377,7 @@ const ButtonPage: React.FC<{}> = () => {
                                         outline bg-transparent dark:bg-red-100
                                         dark:border-2 dark:border-red-500
                                         focus:outline-2 focus:outline-red-300
+                                        hover:bg-red-200
                                         border-red-500"
                                         icon={() =>
                                             <BsHouseExclamationFill
@@ -386,6 +389,7 @@ const ButtonPage: React.FC<{}> = () => {
                                         outline bg-transparent dark:bg-orange-100 focus:outline-2
                                         focus:outline-orange-300 dark:border-2
                                         dark:border-orange-500
+                                        hover:bg-orange-200
                                         border-orange-500"
                                         icon={() =>
                                             <BsBank
@@ -397,6 +401,7 @@ const ButtonPage: React.FC<{}> = () => {
                                         outline bg-transparent dark:bg-blue-50 focus:outline-2
                                          focus:outline-blue-300
                                          dark:border-2 dark:border-blue-500
+                                         hover:bg-blue-100
                                          border-blue-500"
                                         icon={() =>
                                             <BsCartDashFill

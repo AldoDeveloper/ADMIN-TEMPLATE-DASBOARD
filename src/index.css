@@ -204,3 +204,7 @@ html::-webkit-scrollbar-thumb {
     opacity: 1;
   }
 }
+
+.dark-btn:hover{
+  background: red;
+}
